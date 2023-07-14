@@ -1,2 +1,2 @@
 # shell-scripting
-This repo is made to make novices more familiar to automation using, the shell-scripting. 
+This repo is published,to make novices more familiar about automation using, the shell-scripting.
