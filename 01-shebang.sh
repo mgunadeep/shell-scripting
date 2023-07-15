@@ -25,11 +25,19 @@ echo Welcome to Shell-scripting.
    echo Line2
    echo Line3
 
-# In bash, we have escape sequence characters and to enable it, use the option -e So,that we can add some power to the echo 
+# In bash, we have escape sequence characters and to enable it, use the option -e So,that we can add some power to the echo.
 
-#  \n  : new line
+# \n  : new line
 # \t   : tab space                      
 
 echo -e "Line1\nLine2"
-
-echo -e "Line1\t\tLine2"
+### The above command prints the output as follows
+### line1
+### line2
+echo -e "Line1\tLine2"
+### The above command prints the output as follows
+### line1   line2
+echo -e "line1\n\tline2"
+### The above command prints the output as follows
+### line1
+###     line2
