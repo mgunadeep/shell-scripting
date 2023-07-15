@@ -16,16 +16,14 @@ echo Welcome to Shell-scripting.
 ### Now if you run the script, how system will come to know which interpretor it has to use, that's where SHEBANG Notions helps
 
 #### How to run a linux bash script ? 
-
     # *   bash scriptName.sh 
     # *   sh scriptName.sh 
     # *   ./scriptName
 
 # Pringing Multiple Lines 
-
-echo Line1
-echo Line2
-echo Line3
+   echo Line1
+   echo Line2
+   echo Line3
 
 # In bash, we have escape sequence characters and to enable it, use the option -e So,that we can add some power to the echo 
 
