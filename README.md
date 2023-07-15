@@ -4,4 +4,3 @@ This repo is created to make novices more familiar, about automation using the s
 ```
 The most common git commands are as follows
 
-```
