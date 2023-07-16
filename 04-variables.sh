@@ -4,3 +4,4 @@ g=7
 d=11
 a=14
 echo $a
+echo the respective values of the variables g and d are $g : $d 
