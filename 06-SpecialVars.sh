@@ -12,6 +12,11 @@
 #  $$          : Process ID of the script that you're running 
 #  $?          : Gives you the exit code of the previous command 
 
-echo $0
+echo $0   # This prints the name of the script that you're executing. 
 echo "Name of the script printed is $0"
 # The above command prints the name of the script that is being executed.
+
+echo "Name of the Applicant $1"
+echo "Gender is $2"
+echo "City is $3" 
+
