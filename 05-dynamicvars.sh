@@ -12,4 +12,4 @@ echo -e "\e[36m Today's date is $(date +%D) \e[0m"
 
 # Like wise, we can also,dynamically see how many sessions are opened at any given moment.
 echo The opened sessions right now are $(who | wc -l)
-# In the above command we used pipe and passed the output from 1st command as input to 2nd command, where wc=wordcounts and -l option=print the newline counts.
+# In the above command we used pipe and passed the output from 1st command as input to 2nd command, where options wc=wordcounts and -l=print the newline counts.
