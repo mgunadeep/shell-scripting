@@ -19,7 +19,11 @@ echo the respective values of the variables g and d are $g , $d
 k=14
 j=
 FOLDER_TO_DELETE=
-### If you try to print a variable that is not declared ahead, Bash will consider that as a null, instead of throwing you an error like others do, 
-### For ex:-  "rm -rf /data/${FOLDER_TO_DELETE}/ = rm -rf /data" --> The meaning of this command is..it deletes the complete directory or the file under the data directory, as we have not declared that specific variable. So we should be mindful of what we're executing.
+echo the value of k is $k
+echo $j
+echo the value of j is $j
+### If you try to print a variable that is not declared ahead, Bash will consider that as a null, instead of throwing you an error like others do. 
+### Here j is an undeclared variable, and we did that so to supply the value later on for that variable.
 
-### If there is a specific variable which you don't want to declare or assaign a value ahead and you want to supply it later via CLI, you can do that with the 'export' command, but that specific value can be stored for that session only.
+### If there is a specific variable which you don't want to declare or assaign a value ahead and want to supply it later via CLI, you can do that with the 'export' command, but that specific value can be stored for that session only.
+### For ex:-  "rm -rf /data/${FOLDER_TO_DELETE}/ = rm -rf /data" --> The meaning of this command is..it deletes the complete directory or the file under the data directory, as we have not declared that specific variable. So we should be mindful of what we're executing.
