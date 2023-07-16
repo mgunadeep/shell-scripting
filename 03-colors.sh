@@ -18,20 +18,12 @@
 
 ### The syntax for printing the text in forecolor, is as follows,
 ### echo -e "\e[colorcodem I love this color \e[0m"
-
-```
 echo -e "\e[36m I love this color \e[0m"
-```
+
 ### If you want to add color to your background and also want your text to be printed in color, then the syntax for that is,
 ### echo -e "\e[backgrndcolorcode;foregrndcolorcodem I love this color \e]0m"
-
-```
 echo -e "\e[45;34m I love this color \e[0m"
-```
-### Below are the few examples, 
 
-```
+### Below are few examples, 
 echo -e "\e[32m I love this color \e[0m"
 echo -e "\e[41;34m I love this autumn season \e[0m"
-
-```
