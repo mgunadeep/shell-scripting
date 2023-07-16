@@ -3,4 +3,4 @@
 g=7
 d=11
 a=14
-echo [$a ; $b ; $c]
+echo $a
