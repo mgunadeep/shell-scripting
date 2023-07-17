@@ -13,7 +13,7 @@ Example() {
     echo "I'm a function named Example"
     echo "I'm executing this function"
     echo "The Example function is completed"  
-}
+}  ### -->By closing the braces, declaring a function is completed. Now, we have to call the function-'Example'
 Example   ###--> This is how, you can call a function...whose name is 'Example'
 ### End of the function named-'Example'
 
