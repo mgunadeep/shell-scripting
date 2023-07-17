@@ -29,7 +29,7 @@ Status   ###--> Calling 'Status' function
 
 ### You can also call a function, from within a function. Let's see how it can be done.
 Status () {
-    echo " ==>>Now, calling the 'Example' function...from within the "Status" function "
+    echo " ==>>Now, calling the 'Example' function...from within the 'Status' function "
     Example
 }
 Status
