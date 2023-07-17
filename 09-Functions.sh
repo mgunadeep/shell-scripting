@@ -36,7 +36,7 @@ status() {
     echo -e "Load Average on the system from last 1 minute is $(uptime | awk -F , '{print  $3}' | awk -F : '{print $2}')"
 
 echo "Calling example from within the 'status' Function"
-example
+status
     
 }
  
