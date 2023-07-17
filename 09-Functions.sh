@@ -35,8 +35,8 @@ example() {
     echo "I am executing the example function"
     echo "The example function is completed"
 
-echo "Calling the status function from within the example function"
-status    
+    echo "Calling the status function from within the example function"
+    status    
 }
 
 
@@ -45,8 +45,8 @@ status() {
     echo -e "Number of opened sessions : \e[32m $(who | wc -l) \e[0m"    
     echo -e "Load Average on the system from last 1 minute is $(uptime | awk -F , '{print  $3}' | awk -F : '{print $2}')"
 
-echo "Calling the example function from within the status function"
-example
+    echo "Calling the example function from within the status function"
+    example
 }
 
  
