@@ -35,7 +35,9 @@ status() {
     echo -e "Number of opened sessions : \e[32m $(who | wc -l) \e[0m"    
     echo -e "Load Average on the system from last 1 minute is $(uptime | awk -F , '{print  $3}' | awk -F : '{print $2}')"
 
+echo "Calling the example function from within the status function"
 example()
+
 }
  
  
