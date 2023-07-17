@@ -8,37 +8,30 @@
 
 # Declaring a function 
 
-example_st() {
+example() {
     echo "I'm a function named example"
     echo "I am executing the example function"
     echo "The example function is completed"  
 }
-# This is how you can call a function, whose name is 'example'
-example_st
+example    # This is how you can call a function, whose name is 'example'
 
 
 # Now, lets see another function named status.
-status_st() {                                                     
+status() {                                                     
     echo -e "Good Morning and todays date is \e[32m $(date +%F)  \e[0m"
     echo -e "Number of opened sessions : \e[32m $(who | wc -l) \e[0m"    
     echo -e "Load Average on the system from last 1 minute is $(uptime | awk -F , '{print  $3}' | awk -F : '{print $2}')"
 }
-# calling status function
-status_st
+status   # calling 'status' function
 
 
 
-### You can also call a function, within the function. Let's see how it can be done in below.
-
- 
- 
- 
-                                                
-first () {
-    echo "calling the example_st from first function"
-    example_st
+### You can also call a function, from within the function. Let's see how it can be done.
+status () {
+    echo "calling the example from status function"
+    example
 }
-first
+status
  
  
  
