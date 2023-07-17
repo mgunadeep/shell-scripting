@@ -9,12 +9,9 @@
 # Declaring a function 
 
 example() {
-    echo "I am a simple function with name example"
+    echo "I'm a function nmaed example"
     echo "I am executing the example function"
-    echo "example function is completed"
-
-    echo "Calling Status Function"
-    status
+    echo " The example function is completed"
 }
 
 status() {                                                     
