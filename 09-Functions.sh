@@ -30,6 +30,16 @@ status
 
 ### You can also call a function, within the function. Let's see how it can be done in below.
 
+example() {
+    echo "I'm a function named example"
+    echo "I am executing the example function"
+    echo "The example function is completed"
+
+echo "Calling the status function from within the example function"
+status    
+}
+
+
 status() {                                                     
     echo -e "Good Morning and todays date is \e[32m $(date +%F)  \e[0m"
     echo -e "Number of opened sessions : \e[32m $(who | wc -l) \e[0m"    
