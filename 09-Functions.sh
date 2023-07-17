@@ -13,8 +13,7 @@ example() {
     echo "I am executing the example function"
     echo "The example function is completed"
      
-    echo "Calling the status function from within the example function"
-    status  
+    
 }
 # This is how you can call a function, whose name is 'example'
 example 
@@ -36,7 +35,10 @@ status
  
  
  
- 
+ status() {                                                     
+    echo "calling the example function from within the status function"
+    example
+}
  
  
  
