@@ -8,25 +8,23 @@
 
 # Declaring a function 
 
-example() {
+example_st() {
     echo "I'm a function named example"
     echo "I am executing the example function"
-    echo "The example function is completed"
-     
-    
+    echo "The example function is completed"  
 }
 # This is how you can call a function, whose name is 'example'
-example 
+example_st
 
 
 # Now, lets see another function named status.
-status() {                                                     
+status_st() {                                                     
     echo -e "Good Morning and todays date is \e[32m $(date +%F)  \e[0m"
     echo -e "Number of opened sessions : \e[32m $(who | wc -l) \e[0m"    
     echo -e "Load Average on the system from last 1 minute is $(uptime | awk -F , '{print  $3}' | awk -F : '{print $2}')"
 }
 # calling status function
-status
+status_st
 
 
 
@@ -35,11 +33,12 @@ status
  
  
  
- status() {                                                     
-    echo "calling the example function from within the status function"
-    example
+                                                
+first () {
+    echo "calling the example_st from first function"
+    example_st
 }
- 
+first
  
  
  
