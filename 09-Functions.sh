@@ -4,7 +4,7 @@
 # Function is used to capture any repititive block and can be used on need basics.
 
 # When to use funcions?
-# Whenever you want to use a piece of code 'n' number of times, rather than writing that n number of times, you can declare it as a "function" and can call it on need basis
+# Whenever and where-ever in the programm/script, If you're using a piece of code 'n' number of times, then rather than writing that multiple number of times, you can declare it as a "function" and can call it on-need basis.
 
 # Declaring a function is as follows,
 
