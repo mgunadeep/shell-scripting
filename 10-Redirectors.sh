@@ -4,7 +4,7 @@
 #     1) Input Redirector   ( It means, to give an input from a file )       :    '<'          (Ex:- sudo mysql </tmp/studentapp.sql) == Here, the input for the DBcommand 'mysql' is given from the file named '/tmp/studentapp.sql'
 #     2) Output Redirector  ( It means,routing the output to another file )  :    '>' or '1>'  (Ex:- pwd > output.txt) == Here, the output of the command 'pwd' is routed to another file named 'output.txt'
 
-#      NOTE:-  >>  ( This symbol means, it adds the latest output to the already existing content)
+#      NOTE:-  >>  ( This symbol means, it adds the latest output to the already existing content in that file, without overwriting)
 
 # Outputs :  
 #     1) Standout Output 
