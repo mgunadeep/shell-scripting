@@ -1,6 +1,11 @@
 #!bin/bash
 ### There are some variables, whose values gets changed withrespect to time. These are called as "Dynamic variables".
-### These should not be hardcoded as their data/value gets changed too often. So,instead we should softcode them using expressions to dynamically represent the result.
+### These should not be hardcoded as their data/value gets changed too often. So,instead we should softcode them using expressions to dynamically represent the result by querying the data from the system.
+
+user=$(whoami)
+date=$(date)
+directory=$(pwd)
+echo "Hi, You're currently logged in as $user and today date is $date. Your Location in the system is $directory"
 
 # For example,
 echo -e "\e[32m Today's date is 22 Nov 2021 \e[0m"
