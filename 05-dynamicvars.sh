@@ -5,7 +5,7 @@
 user=$(whoami)
 date=$(date)
 directory=$(pwd)
-echo "Hi, You're currently logged in as $user and today date is $date. Your Location in the system is $directory"
+echo "Hi, You're currently logged in as $user and today's date is $date. Your Location in the system is $directory"
 
 # For example,
 echo -e "\e[32m Today's date is 22 Nov 2021 \e[0m"
