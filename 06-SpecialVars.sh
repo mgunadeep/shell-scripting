@@ -31,4 +31,4 @@ name="$1,$2,$3"
 echo "Hai, How are you $1?"
 echo "Seems you look great today, $2"
 echo "how is your health $3, are you feeling better?"
-# Here, for the above script the value of the argument-'$1', has to be supplied from the CLI.
+# Here, for the above script the value of the argument-$1,$2,$3 has to be supplied from the CLI.
