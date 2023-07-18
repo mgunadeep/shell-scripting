@@ -22,5 +22,13 @@ echo "City is $3"
 
 ### For the above three echo commands the input from the CLI should be,
 ### sh 06-SpecialVars.sh Guna Male Bangalore
-###                       $1   $2    $3 ---> These are called Arguments or positional parameter.
+###                       $1   $2    $3 ---> These are called Arguments or positional parameters.
 ### Here, we supplied 3 values...like that from the CLI, we can supply a maximum of 9 values.
+
+# Lets, see another example for that.
+
+name="$1"
+echo "Hai, How are you $1?"
+echo "Seems you look great today, $1"
+echo "how is your health $1, are you feeling better?"
+# Here, for the above script the value of the argument-'$1', has to be supplied from the CLI.
