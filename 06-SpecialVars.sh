@@ -27,7 +27,7 @@ echo "City is $3"
 
 # Lets, see another example of conversational script.
 
-name="$1,$2, $3"
+name="$1,$2,$3"
 echo "Hai, How are you $1?"
 echo "Seems you look great today, $2"
 echo "how is your health $3, are you feeling better?"
