@@ -2,7 +2,8 @@
 ### There are some variables, whose values gets changed withrespect to time. These are called as "Dynamic variables".
 ### These should not be hardcoded as their data/value gets changed too often. So,instead we should softcode them using expressions to dynamically represent the result by querying the data from the system.
 
-user=$(whoami)
+
+user=$(whoami)  ### ---> Always start with '$' and enclose the expression within the paranthesis.
 date=$(date)
 directory=$(pwd)
 echo "Hi, You're currently logged in as $user and today's date is $date. Your Location in the system is $directory"
