@@ -30,7 +30,7 @@ echo the value of j is $j
 ### Let's see an another example for a variable.
 name="Guna"
 echo "Hello $name, how are you?"
-sleep 0.5
+sleep 0.5  #--> Sleep 0.5 = take a gap of 0.5 sec
 echo "You look really nice, $name"
 sleep 0.5
 echo "$name Wanna hangout sometime?"
