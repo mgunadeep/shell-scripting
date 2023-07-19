@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### These conditionals are very significant, as using them makes our script more powerfull. Because they will elevate our scripts...by giving Evaluating and Decision-making powers to our scripts.  
-### Generally, these are of 3 types. 
+### Generally, these conditionals/conditions are of 3 types. 
 #1) Simple-if
 #2) if-else
 #3) else-if
