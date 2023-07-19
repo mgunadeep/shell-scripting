@@ -1,6 +1,6 @@
 #!/bin/bash
 
-###Let's see an exmaple of Simple-if statements,
+###Let's see an exmaple of Simple-if statement,
 
 echo "What is your age?"
 read age
