@@ -15,4 +15,4 @@
 #### How to 'RUN' a linux bash script ? 
     # *   bash scriptName.sh 
     # *   sh scriptName.sh 
-    # *   ./scriptName
+    # *   ./scriptName --->> If there is execute(x) permission only, we can run a script via this method. 
