@@ -5,7 +5,7 @@
 echo "Do you love automobiles (y/n)"
 read automobiles
 if [ $automobiles == "y" ]; then
-    echo "Congrats, You're a Petrolhead"
+    echo "Yes, You're a Petrolhead!"
 else 
-    echo "Sorry!! You're not"
+    echo "oh..Sorry!! You're not a Petrolhead"
 fi
