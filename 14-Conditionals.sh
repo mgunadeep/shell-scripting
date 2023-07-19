@@ -1,6 +1,6 @@
 #!/bin/bash
 
-### These conditionals are very significant, as using them makes our script more powerfull. Because they will ehance the efficiency our scripts...by providing the Evaluating and Decision-making powers to our scripts.  
+### These conditionals are very significant, as using them makes our script more powerfull. Because they will ehance the efficiency of our scripts...by providing the Evaluating and Decision-making powers to our scripts.  
 ### Generally, these conditionals/conditions are of 3 types. 
 #1) Simple-if
 #2) if-else
