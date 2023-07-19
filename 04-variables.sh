@@ -34,5 +34,6 @@ sleep 0.5  #--> Sleep 0.5 = take a gap of 0.5 sec
 echo "You look really nice, $name"
 sleep 0.5
 echo "$name Wanna hangout sometime?"
+### Here if you want to change the name, you don't have to manually do it..for everyline. Instead, we can simply change the data/value for the above declared variable.
 
 ### For ex:-  "rm -rf /data/${FOLDER_TO_DELETE}/ = rm -rf /data" --> The meaning of this command is..it deletes the complete directory or the file under the data directory, as we have not declared that specific variable. So we should be mindfull of what we're executing.
