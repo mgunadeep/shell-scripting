@@ -44,6 +44,8 @@
 # | ||       | Logical OR           | $a -lt 3 \|\| $b -eq 7  | true    |
 # | !        | Logical NOT          | ! $a -gt 5              | false   |
 
+### 
+
 4. String Operators:-
 # -> Used for working with strings.
 
