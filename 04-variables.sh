@@ -40,7 +40,7 @@
 ### This is how, we can declare the varibles in Bash.
 g=7
 d=11
-echo $g      ### Both syntaxes with & without braces are also correct and can be used accordingly.
+echo $g      ### Both syntaxes, with & without braces are also correct and can be used accordingly.
 echo ${g}
 echo the respective values of the variables g and d are $g , $d 
 
