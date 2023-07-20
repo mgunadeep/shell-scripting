@@ -41,7 +41,7 @@
 # | Operator | Description          | Example                 | Result  |
 # |----------|----------------------|-------------------------|---------|
 # | &&       | Logical AND          | $a -gt 5 && $b -lt 10   | true    |
-# | ||       | Logical OR           | $a -lt 3 \|\| $b -eq 7  | true    |
+# | ||       | Logical OR           | $a -lt 3 || $b -eq 7  | true    |
 # | !        | Logical NOT          | ! $a -gt 5              | false   |
 
 ### 
