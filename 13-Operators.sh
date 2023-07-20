@@ -41,10 +41,19 @@
 # | Operator | Description          | Example                 | Result  |
 # |----------|----------------------|-------------------------|---------|
 # | &&       | Logical AND          | $a -gt 5 && $b -lt 10   | true    |
-# | ||       | Logical OR           | $a -lt 3 || $b -eq 7  | true    |
+# | ||       | Logical OR           | $a -lt 3 || $b -eq 7    | true    |
 # | !        | Logical NOT          | ! $a -gt 5              | false   |
 
-### 
+###--> Logical AND (&&):-
+###    The logical AND operator (&&) will be true, only if both the conditions on its left and right sides are true. If any of the conditions is false, the result will be false.
+### i.e condition-2(R.H.S) will be executed, only if condition-1(L.H.S) is true/successfull.
+ 
+###--> Logical OR (||):-
+###   The logical OR operator (||) will be true, if atleast one of the conditions on its left or right side is true. It returns false only when both conditions are false.
+### i.e condition-2(R.H.S) will only be executed, only if condition-1(L.H.S) is false/failure.
+
+###-->  Logical NOT (!):-
+###   The logical NOT operator (!) negates the value of a condition. If the condition is true, the NOT operator makes it false, and vice versa.
 
 4. String Operators:-
 # -> Used for working with strings.
