@@ -1,10 +1,31 @@
 #!bin/bash
 
-### What is a variable?? Variable itself means- It changes and is not constant.
-### A variable is used...to store or assaign the data/value and also to pass the values.
+### What is a variable?? Variable itself means- 'It changes and is not constant'.
+### A variable is used...to store or assaign a specific data/value and also used to pass the values, later on when required in the script/programm.
 ### Variable should never start with a number.
+### In other Programming languages, there are different datatypes like int,float,string. But, in Bash everything is a string by default and there is no concept of datatypes here.
 
-### In other Programming languages there are different datatypes like int,float,string. But, in Bash everything is a string by default and there is no concept of datatypes here.
+# In Bash scripting, there are 3 main types of variables:
+
+# 1. Local Variables:-
+#==> These Variables are like small pieces of information that are used only within specific 'functions' or 'scripts', that you write. 
+# They are like little notes that are only seen and used by the function, where they are written.
+# Once the function finishes, the variable is gone and can't be accessed outside of that specific function.
+
+# 2. Environment Variables:-
+#==> These Variables are like the information, that is shared...among all the programs and scripts that are running on your computer. 
+# They are like the important messages posted on a big bulletin board, available for everyone to see.
+# These variables, can be accessed by any script or program, that is running on your computer as long as you set it using the 'export' command.
+
+# 3. Shell Variables:
+#==> These variables are like special notes, that the [bash,zsh,fish] Shell-(the program that interprets your commands) writes down for itself. 
+# They are like reminders...for the shell to remember certain things.
+# $USER, $HOME, and $SHELL are shell variables. They hold information about the current user, home directory, and the type of shell you are using.
+
+# NOTE:- Bash variables are used to store information, and you don't need to declare their type. 
+# So, to give you a gist--> Local variables are used within a specific function, environment variables are shared among all programs, and shell variables are special reminders for the shell itself. 
+# These variables, make your 'scripts' more powerful and flexible by allowing you to store and use data more efficiently.
+
 
 ### Syntax : $variableName : $ is going to print the value of the variable.
 
