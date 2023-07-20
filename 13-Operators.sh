@@ -57,7 +57,7 @@
 # |     >    | Greater than (string)           | $str1 > $str2               | false   |
 
 # [ -z "$var" ] -> This is true if var is not having any data.
-# [ -n "$var" ] _> This is true if var is having any data.
+# [ -n "$var" ] -> This is true if var is having any data.
 
 #   -z and -n are inverse proportional options
 
