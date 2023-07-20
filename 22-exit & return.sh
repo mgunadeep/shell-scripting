@@ -1,7 +1,7 @@
 #!/bin/bash
 
-### 'exit' command...comes out, from the execution of that script completely. And, we can also give/mention exit codes for a specific function or loop to know more about the execution status...like is it successfull or failed? So that, we can identify if there are any issues.
-### While 'return' command just comes out, from that function and will proceed with the rest of the execution,unlike exit.
+### 'exit' command...comes out from the execution, of that script completely. And, we can also give/mention exit codes for a specific function to know more about the execution status...like is it successfull or failed? So that, we can identify,if there are any issues in a lengthy script.
+### While 'return' command just comes out, from that specific function and will proceed with the rest of the execution,unlike exit.
 ### exit command is free to use any number from 0-255, but the values from 125+(126-255) are usually taken by the system. 
 ### So, we don't use those values in the script. Hence, the script author is always recommended to use the values from (0-125).
 
