@@ -11,15 +11,16 @@
 #==> These Variables are like small pieces of information that are used only within specific 'functions' or 'scripts', that you write. 
 # They are like little notes that are only seen and used by the function, where they are written.
 # Once the function finishes, the variable is gone and can't be accessed outside of that specific function.
-# Ex:- Let's see an example of local variable i.e $name in the Car function, 
+# Ex:- 
+#      Let's see an example of local variable i.e $name in the Car function, 
 Car () {
     local name="Ferrari 488 GTB!"
     echo "I love, $name!"
 }
-Car   #==> Output:-  I love, Ferrari 488 GTB!!
+Car                 #==> Output:-  I love, Ferrari 488 GTB!!
 
-echo "Name= $name"   #==> Output:-  Name=
-# As, you can see we tried to print the variable $name, outside of the function..but it dint give the expected output, as its a local varible and can't really be used outside of a that specific function.
+echo "Name=$name"   #==> Output:-  Name=
+# As, you can see we tried to print the data in the variable by giving the command--> $name, But it din't give the expected output, as it's a local variable and can't really be used outside of that specific function.
 
 
 
