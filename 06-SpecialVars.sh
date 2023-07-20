@@ -4,11 +4,11 @@
 
 # Here are few of the special variabes :  $0 to $9 , $* , $@  $# , $$, $?
 
-###  $0          : This gives the name of the script you're running 
+###  $0          : This gives the name of the script you're executing.
 ###  $1 to $9    :You can pass a maximum of 9 variables from the command line when you're running the script and these are called 'Arguments'. 
-###  $*          : Prints you all the supplied variables in the script 
-###  $@          : Prints you all the supplied variables in the script 
-###  $#          : Prints you the total number of variables
+###  $*          : Prints you all the supplied variables in the script.
+###  $@          : Prints you all the supplied variables in the script.
+###  $#          : Prints you the total number of Arguments,that you have supplied via CLI.
 ###  $$          : Prints you the Process-ID of that script,you're executing.
 ###  $?          : Gives you the exit code of the previous command.
 
