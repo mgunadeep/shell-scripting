@@ -1,7 +1,8 @@
 #!bin/bash
 
-### What is a variable?? Variable itself means-It changes, its not constant.
+### What is a variable?? Variable itself means- It changes and is not constant.
 ### A variable is used...to store or assaign the data/value and also to pass the values.
+### Variable should never start with a number.
 
 ### In other Programming languages there are different datatypes like int,float,string. But, in Bash everything is a string by default and there is no concept of datatypes here.
 
