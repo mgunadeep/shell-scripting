@@ -1,10 +1,13 @@
 #!bin/bash
 
 # Redirectors are of 2 types in bash.
-#     1) Input Redirector   ( It means, to give an input from a file )       :    '<'          (Ex:- sudo mysql </tmp/studentapp.sql) == Here, the input for the DBcommand 'mysql' is given from the file named '/tmp/studentapp.sql'
-#     2) Output Redirector  ( It means,routing the output to another file )  :    '>' or '1>'  (Ex:- pwd > output.txt) == Here, the output of the command 'pwd' is routed to another file named 'output.txt'
+#     1) Input Redirector   ( It means, to give an input from a file )       :  '<'          (Ex:- sudo mysql </tmp/studentapp.sql) == Here, the input for the DBcommand 'mysql' is given from the file named '/tmp/studentapp.sql'
+#     2) Output Redirector  ( It means,routing the output to another file )  :  '>' or '1>'  (Ex:- pwd > output.txt) == Here, the output of the command 'pwd' is routed to another file named 'output.txt'
 
-#      NOTE:-  >>  ( This symbol means, it adds the latest output to the already existing content in that file, without overwriting)
+### --> Standardoutput(>):- Instead of displaying the output to the screen, if we want to store the ouput to a file, then we should use this STANDARDOUTPUT-redirector.
+### --> standardinput(<) :- Instead of giving the input from keyboard, and if we want to give the input from a file, then we should use this STANDARDINPUT-redirector.
+
+#  NOTE:-  '>>' [ This symbol means, it adds the latest output to the already existing content in that file, without overwriting ]
 
 # Outputs :  
 #     1) Standard Output 
@@ -23,11 +26,11 @@ ls -ltr 2> op.txt   # Redirects, only the standard errors to the file op.txt
 # 0         :  successful 
 # 1-255     :  partial failure / complete failure / partial sucess. 
 
-# How do I come to know the exit code of the previously executed command ? ? ? 
-# $?    
+# How do I come to know the exit code of the previously executed command ? ? ?
+# ==> " echo $? "    
 
 
-# Exit codes also plays a key role in debugging big scripts.
+# 'Exit codes' also plays a key role in debugging big scripts.
 
 # ==>> If you're dealing with a big script and if your script fails and it's really challenging to figure out the mistake, as it makes us to patiently observe the entire script from the beginning.
 # Instead, we can use...exit codes everyWhere to find out where our script fails.
