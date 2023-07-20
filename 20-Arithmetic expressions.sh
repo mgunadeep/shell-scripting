@@ -7,4 +7,4 @@ echo $((28 + 3))
 
 ### Here You have to enclose the expression in double paranthesis with starting with a '$'- dollar prompt
 
-### Bash can't display the float(deciaml) output,as there are no data types concept here.
+### Bash can't display the float(decimal) output,as there are no data types concept here.
