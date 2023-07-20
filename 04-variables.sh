@@ -32,6 +32,8 @@ echo "Name=$name"   #==> Output:-  Name=
   export tweet="Hello, This is my first tweet!"
   echo $tweet  # Output: Hello, This is my first tweet!
 
+  
+
 # 3. Shell Variables:
 #==> These variables are like special notes, that the [bash,zsh,fish] Shell-(the program that interprets your commands) writes down for itself. 
 # They are like reminders...for the shell to remember certain things.
