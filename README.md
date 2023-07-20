@@ -1,41 +1,18 @@
 # shell-scripting
 This repo is created to make novices more familiar, about automation using the shell-scripting. Shell is nothing, but an interpretor and it is native to linux, so it doesn't need any extra layer for translation, unlike other languages. There are different shells in linux like Bash, zsh, fish. Depending upon your personal preference, you can choose any one. 
 
+Things to remember, whn you're scripting:-
 ```
-The most common git commands are as follows
- 
- These are common Git commands used in various situations:
+* When you develop something, ensure you run it twice before you confirm it as, 'WORKING'.
+* Ensure, you remove the duplicate pieces of code.
+* 'Validation'--should be given a very high priority. 
+* Try to 'parameterize' the script and as much as possible, and make your dynamic.
+```
+Exit Status:- Every command, that you execute..will return some status code and based on that code, we can decide whether the command is success/failure/partially completed, and the command to see the exit code of the previous command is echo $?
 
-1. Start a working area (see also: git help tutorial)
-* clone —> Clone a repository into a new directory
-* init  —>  Create an empty Git repository or reinitialise  an  existing one
+```
+  In Linux, exit codes range from 0 to 255.
 
-2. Work on the current change (see also: git help everyday)
-* add.     —>   Add file contents to the index
-*  mv      —>  Move or rename a file, a directory, or a symlink
-*  restore —>  Restore working tree files
-*  rm      —>  Remove files from the working tree and from the index
-
-3. Examine the history and state (see also: git help revisions)
-* bisect —>  Use binary search to find the commit that introduced a bug
-* diff   —>  Show changes between commits, commit and working tree, etc
-* grep   —>  Print lines matching a pattern
-*  log   —>  Show commit logs
-*  show  —>  Show various types of objects
-*  status —> Show the working tree status
-
-4. Grow, mark and tweak your common history
-*  branch  —>  List, create, or delete branches
-*  commit  —>  Record changes to the repository
-*  merge   —>  Join two or more development histories together
-*  rebase  —>  Reapply commits on top of another base tip
-*  reset   —>  Reset current HEAD to the specified state
-*  switch  —>  Switch branches
-*  tag     —>  Create, list, delete or verify a tag object signed with GPG
-
-5. Collaborate (see also: git help workflows)
-*  fetch —>  Download objects and refs from another repository.
-*  pull  —>  Fetch from and integrate with another repository or a local branch.
-*  push  —>  Update remote refs along with associated objects.
-
+  0     : Exit Code means, command completed successfully.
+ 1-255  : Either partially completed or failed.
 ```
