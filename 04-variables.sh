@@ -13,12 +13,14 @@
 # Once the function finishes, the variable is gone and can't be accessed outside of that specific function.
 # Ex:- Let's see an example of local variable i.e $name in the Car function, 
 Car () {
-    local name="Ferrari 488 GTB"
+    local name="Ferrari 488 GTB!"
     echo "I love, $name!"
 }
-Car   # ==>Output:- I love, Ferrari 488 GTB
+Car   #==> Output:-  I love, Ferrari 488 GTB!!
 
-echo "Name: $name"   # Output: Name:
+echo "Name= $name"   #==> Output:-  Name=
+# As, you can see we tried to print the variable $name, outside of the function..but it dint give the expected output, as its a local varible and can't really be used outside of a that specific function.
+
 
 
 # 2. Environment Variables:-
