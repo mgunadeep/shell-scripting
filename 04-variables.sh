@@ -11,6 +11,15 @@
 #==> These Variables are like small pieces of information that are used only within specific 'functions' or 'scripts', that you write. 
 # They are like little notes that are only seen and used by the function, where they are written.
 # Once the function finishes, the variable is gone and can't be accessed outside of that specific function.
+# Ex:- Let's see an example of local variable i.e $name in the Car function, 
+Car () {
+    local name="Ferrari 488 GTB"
+    echo "I love, $name!"
+}
+Car   # ==>Output:- I love, Ferrari 488 GTB
+
+echo "Name: $name"   # Output: Name:
+
 
 # 2. Environment Variables:-
 #==> These Variables are like the information, that is shared...among all the programs and scripts that are running on your computer. 
