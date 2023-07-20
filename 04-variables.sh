@@ -16,14 +16,22 @@
 #==> These Variables are like the information, that is shared...among all the programs and scripts that are running on your computer. 
 # They are like the important messages posted on a big bulletin board, available for everyone to see.
 # These variables, can be accessed by any script or program, that is running on your computer as long as you set it using the 'export' command.
+# Ex:-
+  export tweet="Hello, This is my first tweet!"
+  echo $tweet  # Output: Hello, This is my first tweet!
 
 # 3. Shell Variables:
 #==> These variables are like special notes, that the [bash,zsh,fish] Shell-(the program that interprets your commands) writes down for itself. 
 # They are like reminders...for the shell to remember certain things.
 # $USER, $HOME, and $SHELL are shell variables. They hold information about the current user, home directory, and the type of shell you are using.
+# Ex:-
+   echo "Current User: $USER"
+   echo "Home Directory: $HOME"
+   echo "Current Shell: $SHELL"
+
 
 # NOTE:- Bash variables are used to store information, and you don't need to declare their type. 
-# So, to give you a gist--> Local variables are used within a specific function, environment variables are shared among all programs, and shell variables are special reminders for the shell itself. 
+# So, finally to give you a gist for all this--> Local variables are used within a 'specific function', Environment variables are 'shared among all programs and scripts', and Shell variables are a 'special reminders for the shell itself'. 
 # These variables, make your 'scripts' more powerful and flexible by allowing you to store and use data more efficiently.
 
 
@@ -32,10 +40,8 @@
 ### This is how, we can declare the varibles in Bash.
 g=7
 d=11
-echo $g
+echo $g      ### Both syntaxes with & without braces are also correct and can be used accordingly.
 echo ${g}
-### The above mentioned both syntaxes are also correct and can be used accordingly.
- 
 echo the respective values of the variables g and d are $g , $d 
 
 k=14
