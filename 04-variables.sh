@@ -50,10 +50,12 @@ FOLDER_TO_DELETE=
 echo the value of k is $k
 echo $j
 echo the value of j is $j
-### If you try to print a variable that is not declared ahead, Bash will consider that as a null, instead of throwing you an error like others do. 
-
-### If there is a specific variable which you don't want to declare or assaign a value ahead and you want to supply it later via CLI, you can do that with the 'export' command, but that specific value can be stored for that session only. Also remember you can only supply a specific value to a variable, but you cant declare whole variables through CLI, using the export command.
 ### Here j is an undeclared variable, and we did that so to supply the value later on for that variable.
+
+# NOTE:- 1) If you try to print a variable that is not declared ahead, Bash will consider that as a null, instead of throwing you an error like others do. 
+#        2) If there is a specific variable which you don't want to declare or assaign a value ahead and you want to supply it later via CLI, you can do that with the 'export' command, but that specific value can be stored for that session only.
+#              also remember you can only supply a specific value to a variable, but you can't declare whole variables through CLI, using the export command.
+
 
 ### Let's see an another example for a variable.
 name="Guna"
