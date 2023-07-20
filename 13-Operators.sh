@@ -1,7 +1,10 @@
 # #!bin/bash
 
-# #In Bash scripting, operators are symbols or special keywords that allow you to perform various operations on data, variables, and expressions.
-# They are used to manipulate values, make decisions, and perform calculations, making your scripts more powerful and flexible. 
+# #In Bash scripting, operators..are symbols or special keywords that allow you to perform various operations on data, variables, and expressions.
+# They are used to manipulate values, make decisions, and perform calculations, making your scripts more powerful and flexible and increases the efficiency of your scripts.
+### Expressions are categorized in to three types, they are...
+# 1. Numbers, 2. Strings, 3. Files
+
 # Bash provides several types of operators for different purposes. Let's explore the most common types of operators used in Bash scripting:
 
 1. Arithmetic Operators:-
