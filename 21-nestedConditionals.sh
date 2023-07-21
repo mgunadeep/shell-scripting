@@ -34,11 +34,9 @@ if [ $rain == y ]; then
     echo "Take your umbrella, when you're going out"
 else 
     read -p "Is it sunny outside? (y/n)" sunny
-    echo
         if [ $sunny == y ]; then
                echo "Enjoy the sunshine and have a lovely day"
         else 
                echo "Check for the weather forecast"
         fi
-
 fi
