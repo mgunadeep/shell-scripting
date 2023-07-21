@@ -30,7 +30,7 @@
 echo "Is it raining outside (y/n)?"
 read rain
 
-if [ $rain == y ]; then
+if [ $rain = y ]; then
     echo "Take your umbrella, when you're going out"
 else 
     echo "Enjoy the sunshine outside"
