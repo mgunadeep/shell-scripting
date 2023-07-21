@@ -10,7 +10,6 @@
 
 read -p "Enter your username: " username
 read -sp "Enter your password: " password
-echo
 
 if [ "$username" = "admin" ]; then   
     if [ "$password" = "secret" ]; then
