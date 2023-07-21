@@ -27,16 +27,34 @@
 
 # Lets see an another example for it ...
 
-echo "Is it raining outside? (y/n)"
-read rain
+# echo "Is it raining outside? (y/n)"
+# read rain
 
-if [ $rain == y ]; then
-    echo "Take your umbrella, when you're going out"
+# if [ $rain == y ]; then
+#     echo "Take your umbrella, when you're going out"
+# else 
+#     read -p "Is it sunny outside? (y/n)" sunny
+#         if [ $sunny == y ]; then
+#                echo "Enjoy the sunshine and have a lovely day"
+#         else 
+#                echo "Check for the weather forecast"
+#         fi
+# fi
+
+
+# Let's see an another nested conditionals using elif statements
+
+echo "Enter your marks"
+read mark 
+if [ $mark -ge 90 ]; then   
+    echo "Congrats! You have secured A+ grade"
+elif [ $mark -ge 89]; then
+    echo "Good! You have scored A grade"
+elif [ $mark -ge 75]; then
+     echo "Scope for improvement, You have scored B grade"
+elif [ $mark -ge 60]; then
+    echo "Work very hard, You have scored C grade"
+
 else 
-    read -p "Is it sunny outside? (y/n)" sunny
-        if [ $sunny == y ]; then
-               echo "Enjoy the sunshine and have a lovely day"
-        else 
-               echo "Check for the weather forecast"
-        fi
+    echo "You have failed, not at all acceptable"
 fi
