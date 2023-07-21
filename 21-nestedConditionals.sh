@@ -42,7 +42,7 @@
 # fi
 
 
-# Let's see an another nested conditionals using elif statements
+# Let's see another nested conditionals using elif conditionals, inside the if-else conditionals
 
 echo "Enter your marks"
 read mark 
