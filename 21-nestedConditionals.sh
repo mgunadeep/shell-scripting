@@ -48,11 +48,11 @@ echo "Enter your marks"
 read mark 
 if [ $mark -ge 90 ]; then   
     echo "Congrats! You have secured A+ grade"
-elif [ $mark -ge 89]; then
+elif [ $mark -ge 89 ]; then
     echo "Good! You have scored A grade"
-elif [ $mark -ge 75]; then
+elif [ $mark -ge 75 ]; then
      echo "Scope for improvement, You have scored B grade"
-elif [ $mark -ge 60]; then
+elif [ $mark -ge 60 ]; then
     echo "Work very hard, You have scored C grade"
 
 else 
