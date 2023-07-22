@@ -50,6 +50,6 @@ fi
 
 
 # NOTE:- What is the difference between a elif and nested-if conditionals???
-# ==> In nested-if conditionals, both the parent-if and nested-if statements..should definitely has to be true, in order to-->proceed any futher or, to execute-->the next conditions in the script.
-# ==> While in elif(else-if) conditionals, we're not saying that..both the first 'if statement' and the 'elif statement' has to be true, But..instead we are saying...if the first or above mentioned 'if statement' doesn't evaluate true, and it is false.
-#        Well, Here's an another chance...else-if, execute the expression with-in me, and then go for my next command. 
+# ==> In 'elif(else-if)' conditionals, we're not saying that..both the first 'if statement' and the 'elif statement' has to be true, But..instead we are saying that..Hey,if the first or above mentioned 'if statement' doesn't evaluate true, and if it is false,,
+#        Well, Here's an another chance...else-if(elif) execute the expression with-in me, and then go for my next command. 
+# ==> While in the 'nested-if' conditionals, both the 'parent-if' and 'nested-if' statements..should definitely has to be true, in order to-->proceed any futher, or, to execute-->the next conditions in the script.
