@@ -39,6 +39,7 @@ echo "What is your age?"
 read age
 if [ $age -le 12 ]; then
     echo "You're a kid"
+    
 elif [ $age -le 18 ]; then
     echo "You're a teenager"
 elif [ $age -le 26 ]; then
