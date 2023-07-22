@@ -47,6 +47,9 @@ else
      echo "You're a senior citizen"
 fi
 
+# This example demonstrates, how elif allows you to handle multiple conditions in a sequence, 
+# making it easier to classify the age into different groups based on various ranges.
+
 
 
 # NOTE:- What is the difference between a elif and nested-if conditionals???
