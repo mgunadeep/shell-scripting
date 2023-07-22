@@ -6,12 +6,11 @@
 #2) if-else
 #3) else-if
 
-### The syntax of "Simple-if"/"if" , is as follows...
+### The syntax of "Simple-if" / "if" , is as follows...
 
-    #if [ expression ]; then
+    # if [ expression ]; then
     #     command1
     #     command2
-    #     command3
     # fi 
     
 # If expression is true then it executes the commands.
@@ -31,7 +30,7 @@
 # If expression is true then it executes the commands
 # NOTE: If the expression is false, then it will perform the conditions in else.
 
-### The Syntax of "else-if", is as follows...
+### The Syntax of "elif", is as follows...
 
 #     if [ expression1 ]; then
 #         command1
