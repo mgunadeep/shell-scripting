@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# elif statement allows you to check additional conditions when the provided initial 'if statement' is false. 
-# It's like providing an alternative plan, if the first plan doesn't work out.
-# Elif is like...giving an another chance or rather, providing another set of conditions to the script to evaluate, like even if the above mentioned...'if statement' is false, so that you can now..come to elif to execute the conditions in it, without directly going for else.
+# elif statement gives you the ability, to check additional conditions when the provided initial 'if statement' is false. 
+# It's like providing an alternative plan(B,C,D..), if the first plan,(A) doesn't work out.
+# Elif is like...giving an another chance or rather, providing another set of conditions to the script to evaluate/check, like even if the above mentioned...'if statement' is false, so that you can now..come to elif to execute the expression in it, without directly going for-else.
+# If both the 'if' and 'elif' conditions are false, then the script executes the 'else' block as a fallback.
 # The elif statement can only be used, if you have "multiple/many conditions" to evaluate in a sequence.
-# You can have multiple elif statements to check different conditions in sequence
+# You can have, multiple elif statements to check different conditions in sequence
 # There is no closing for elif like (fi) in 'if statement'.
 
 
