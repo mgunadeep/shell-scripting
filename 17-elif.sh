@@ -5,7 +5,7 @@
 # Elif is like...giving an another chance or rather, providing another set of conditions to the script to evaluate/check, like even if the above mentioned...'if statement' is false, so that you can now..come to elif to execute the expression in it, without directly going for-else.
 # If both the 'if' and 'elif' conditions are false, then the script executes the 'else' block as a fallback.
 # The elif statement can only be used, if you have "multiple/many conditions" to evaluate in a sequence.
-# If there are different, set of classifications, and ranges then the elif can be put to use for efficient evaluation.
+# If there are different, set of classifications, categeories, and ranges then the elif can be put to use-for efficient evaluation.
 # There is no closing for elif like (fi) in 'if statement'.
 
 
