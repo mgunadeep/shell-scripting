@@ -11,23 +11,23 @@
 
 # The syntax for elif is...
 
-    if [ expression 1 ] ; then
+    #   if [ expression 1 ]; then
         
-        command 1 
+    #         command 1 
 
-    elif [ expression 2 ] ; then 
+    #   elif [ expression 2 ]; then 
 
-        command 2 
+    #         command 2 
     
-    elif [ expression 3 ] ; then 
+    #   elif [ expression 3 ]; then 
 
-        command 3 
+    #         command 3 
     
-    else 
+    #   else 
         
-        command 4
+    #         command 4
 
-    fi
+    #   fi
 
 # NOTE:- What is the difference between a elif and nested-if conditionals???
 # ==> In nested-if conditionals, both the parent-if and nested-if statements..should definitely has to be true, in order to-->proceed any futher or, to execute-->the next conditions in the script.
