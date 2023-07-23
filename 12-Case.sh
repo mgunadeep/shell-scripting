@@ -21,27 +21,31 @@
 
 name = "Guna"
 echo "hello $name, Select your preferred Character type
-    1-Samurai
-    2-Falcon
-    3-Theaussurus"
+    1 - Samurai
+    2 - Falcon
+    3 - Theaussurus"
 read type
 
 case $type in
-    1) type = "Samurai"
-       health = 20
-       power = 25
-       weapon = 20
-       ;;
 
-    2) type = "Falcon"
-       health = 18
-       fly = 30
-       flame = 35
-       ;;
+    1) 
+        type = Samurai
+        health = 20
+        power = 25
+        weapon = 20
+        ;;
 
-    3) type = "Theaussurus"
-       health = 30
-       bite = 20
-       throw = 40
-       ;;
-    esac
+    2) 
+        type = Falcon
+        health = 18
+        fly = 30
+        flame = 35
+        ;;
+
+    3) 
+        type = Theaussurus
+        health = 30
+        bite = 20
+        throw = 40
+        ;;
+esac
