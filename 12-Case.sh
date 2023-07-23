@@ -20,26 +20,26 @@
 # So, now Let's implement this scenario in our script by using the 'case'
 
 name= "Guna"
-echo "hello $name Select your preferred Charcter type
+echo "hello $name Select your preferred Character type
     1-Samurai
     2-Falcon
     3-Theaussurus"
 read type
 
 case $type in
-    1) type = Samurai
+    1) type = "Samurai"
        health = 20
        power = 25
        weapon = 20
        ;;
 
-    2) type = Falcon
+    2) type = "Falcon"
        health = 18
        fly = 30
        flame = 35
        ;;
 
-    3) type = Theaussurus
+    3) type = "Theaussurus"
        health = 30
        bite = 20
        throw = 40
