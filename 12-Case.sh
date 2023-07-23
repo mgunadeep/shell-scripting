@@ -52,3 +52,5 @@ esac
 
 echo "You have choosen the $type and your health is $health, your power is $power and your weapon strength is $weapon"
 
+# Let us now see an another example for this.
+
