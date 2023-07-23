@@ -5,8 +5,7 @@ echo "Hello $name, Enter your preferred number from (1-7)!!"
 read number 
 
 case $number in 
-      1) $number=1
-        $day=Sunday
+      1) echo "Sunday"
         ;;
       2) $number=2
       $day = Monday
@@ -28,4 +27,4 @@ case $number in
         ;;
     esac
 
-    echo "Hello $name, you have selected $number and its coresponding day is $day"
+    
