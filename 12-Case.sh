@@ -19,16 +19,16 @@
 # In the beginning of some video games, the player should select a character to play/enter the game, so that he can get all that assaigned properties for that character. 
 # So, now Let's implement this scenario in our script by using the 'case'
 
-name= "Guna"
+name="Guna"
 echo "hello $name, Select your preferred Character type
     1 - Samurai
     2 - Falcon
     3 - Theaussurus"
-read type
+read select
 
-case $type in
+case $select in
 
-    1) 
+    1)
         type=Samurai
         health=20
         power=25
