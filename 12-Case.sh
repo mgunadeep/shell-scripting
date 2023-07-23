@@ -29,24 +29,24 @@ read select
 case $select in
 
     1)
-        type=Samurai
-        health=20
-        power=25
-        weapon=20
+        type = Samurai
+        health = 20
+        power = 25
+        weapon = 20
         ;;
 
     2) 
-        type=Falcon
-        health=18
-        power=30
-        weapon=35
+        type = Falcon
+        health = 18
+        power = 30
+        weapon = 35
         ;;
 
     3) 
-        type=Theaussurus
-        health=30
-        power=20
-        weapon=40
+        type = Theaussurus
+        health = 30
+        power = 20
+        weapon = 40
         ;;
 esac
 
