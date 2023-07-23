@@ -26,7 +26,7 @@ echo "Enter two numbers, and the operation you want to perform"
 read $1 and $2
 read operator
 
-case $1 and $2 in
+case $1,$2,$operator in
      1) echo "Adding the two numbers" 
      $(( $1 + $2 )) 
      ;;
