@@ -6,10 +6,10 @@ read number
 
 case $number in 
       1) $number=1
-        "Sunday"
+        $day=Sunday
         ;;
       2) $number=2
-      "Monday"
+      $day = Monday
         ;;
       3) $number=3  
         "Tuesday"
@@ -28,4 +28,4 @@ case $number in
         ;;
     esac
 
-    echo "Hello $name, you have selected $number and its coresponding day is "
+    echo "Hello $name, you have selected $number and its coresponding day is $day"
