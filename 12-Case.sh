@@ -29,10 +29,10 @@ read select
 case $select in
 
     1)
-        type = Samurai
-        health = 20
-        power = 25
-        weapon = 20
+        type=Samurai
+        health=20
+        power=25
+        weapon=20
         ;;
 
     2) 
@@ -50,4 +50,5 @@ case $select in
         ;;
 esac
 
-echo "You have choosen the $type and your health is $health, you power is $power and your weapon is $weapon"
+echo "You have choosen the $type and your health is $health, your power is $power and your weapon strength is $weapon"
+
