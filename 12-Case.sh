@@ -20,7 +20,7 @@
 # So, now Let's implement this scenario in our script by using the 'case'
 
 name="Guna"
-echo "hello $name, Select your preferred Character type
+echo "hello $name, Select your preferred Character type:
     1 - Samurai
     2 - Falcon
     3 - Theaussurus"
@@ -38,14 +38,16 @@ case $select in
     2) 
         type=Falcon
         health=18
-        fly=30
-        flame=35
+        power=30
+        weapon=35
         ;;
 
     3) 
         type=Theaussurus
         health=30
-        bite=20
-        throw=40
+        power=20
+        weapon=40
         ;;
 esac
+
+echo "You have choosen the $type and your health is $health, you power is $power and your weapon is $weapon"
