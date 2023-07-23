@@ -23,7 +23,7 @@ name = "Guna"
 echo "hello $name Select your preferred Charcter type
     1-Samurai
     2-Falcon
-    3-Theaussurus
+    3-Theaussurus"
 read type
 
 case $type in
