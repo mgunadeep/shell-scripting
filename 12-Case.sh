@@ -19,7 +19,8 @@
 # In the beginning of some video games, the player should select a character to play/enter the game, so that he can get all that assaigned properties for that character. 
 # So, now Let's implement this scenario in our script by using the 'case'
 
-echo "hello player, Select your preferred Character type
+name = "Guna"
+echo "hello $name, Select your preferred Character type
     1-Samurai
     2-Falcon
     3-Theaussurus"
@@ -43,3 +44,4 @@ case $type in
        bite = 20
        throw = 40
        ;;
+    esac
