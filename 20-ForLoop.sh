@@ -19,4 +19,4 @@ done
 # done
 
 ## 'Break' is to interrupt/stop the loop.
-## 'Continue' means...that it will literally, ignores that specific loop given for x 
+## 'Continue' means...that it will literally, ignore/skip that specific loop given for x 
