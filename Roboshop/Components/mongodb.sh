@@ -38,7 +38,7 @@ status $?
 
 echo -n "Restarting the mongodb service...:"
 systemctl restart mongod
-stat $?
+status $?
 
 echo -n "Downloading the schema...:"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip" &>> $logfile
