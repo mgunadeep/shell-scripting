@@ -10,40 +10,31 @@ if [ $ID -ne 0 ]; then
     exit 1
 fi
 
+status () {
+    if [ $1 -eq 0 ]; then 
+            echo -e "\e[32m Success \e[0m"
+    else
+            echo -e "\e[31m failure \e[0m"
+    fi
+}
 
 echo -n "Installing $webserver:"
 yum install $webserver -y &>> $logfile
-if [ $? -eq 0 ]; then 
-        echo -e "\e[32m Success \e[0m"
-else
-        echo -e "\e[31m failure \e[0m"
-fi
+status $?
 
 echo -n "Downloading the $component content:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
-if [ $? -eq 0 ]; then 
-        echo -e "\e[32m Success \e[0m"
-else
-        echo -e "\e[31m failure \e[0m"
-fi
+Status $?
 
 
 echo -n "Doing a cleanup:"
 cd /usr/share/$webserver/html
 rm -rf *
-if [ $? -eq 0 ]; then 
-        echo -e "\e[32m Success \e[0m"
-else
-        echo -e "\e[31m failure \e[0m"
-fi
+status $?
 
 echo -n "unzipping the content:"
 unzip /tmp/$component.zip &>> $logfile
-if [ $? -eq 0 ]; then 
-        echo -e "\e[32m Success \e[0m"
-else
-        echo -e "\e[31m failure \e[0m"
-fi
+status $?
 
 
 # mv $component-main/* .
