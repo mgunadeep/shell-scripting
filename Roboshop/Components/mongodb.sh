@@ -31,3 +31,5 @@ status $?
 echo -n "Starting the $component service:"
 systemctl start mongod
 status $?
+
+
