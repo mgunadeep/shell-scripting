@@ -13,7 +13,6 @@ fi
 
 echo "Installing $webserver"
 yum install nginx -y &>> $logfile
-
 if [ $? -eq 0 ]; then 
         echo -e "\e[32m Success \e[0m"
 else
