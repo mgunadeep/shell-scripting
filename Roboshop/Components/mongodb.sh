@@ -17,17 +17,17 @@ status () {
 }
 
 echo -n "Setting up the $component repo's:"
-curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo &>> $logfile
+curl -s -o /etc/yum.repos.d/$component.repo https://raw.githubusercontent.com/stans-robot-project/$component/main/mongo.repo &>> $logfile
 status $?
 
-echo -n "Installing the mongodb:"
+echo -n "Installing the $component:"
 yum install -y mongodb-org &>> $logfile
 status $?
 
-echo -n "Enabling the $component"
+echo -n "Enabling the $component:"
 systemctl enable mongod &>> $logfile
 status $?
 
-echo -n "Starting the $component service"
+echo -n "Starting the $component service:"
 systemctl start mongod
 status $?
