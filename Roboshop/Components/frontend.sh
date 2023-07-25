@@ -2,7 +2,7 @@
 
 webserver=nginx
 component=frontend
-
+logfile=/tmp/frontend.log
 
 ID=$(id -u)
 if [ $ID -ne 0 ]; then 
@@ -12,7 +12,7 @@ fi
 
 
 echo "Installing $webserver"
-yum install nginx -y &>> /tmp/frontend.log
+yum install nginx -y &>> $logfile
 
 if [ $? -eq 0 ]; then 
         echo -e "\e[32m Success \e[0m"
