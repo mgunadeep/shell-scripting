@@ -23,11 +23,11 @@ yum install $webserver -y &>> $logfile
 status $?
 
 echo -n "Enabling the $component"
-systemctl enable $component
+systemctl enable nginx
 status $?
 
 echo -n "Starting the $component webserver"
-systemctl start $component
+systemctl start nginx
 status $?
 
 echo -n "Downloading the $component content:"
@@ -59,6 +59,6 @@ status $?
 
 echo "Restarting the $component service"
 systemctl restart $webserver
-Status $?
+status $?
 
 
