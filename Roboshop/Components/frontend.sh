@@ -2,7 +2,7 @@
 
 webserver=nginx
 component=frontend
-logfile=/tmp/frontend.log
+
 
 ID=$(id -u)
 if [ $ID -ne 0 ]; then 
@@ -12,12 +12,13 @@ fi
 
 
 echo "Installing $webserver"
-yum install nginx -y &>> $logfile
-    if[ $? -eq 0 ]; then 
+yum install nginx -y &>> /tmp/frontend.log
+
+if[ $? -eq 0 ]; then 
         echo -e "\e[32m Success \e0[m"
-    else
+else
         echo -e "\e[31m failure \e0[m"
-    fi
+fi
 # echo -n "Downloading the $component html content"
 # curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 # echo $? 
