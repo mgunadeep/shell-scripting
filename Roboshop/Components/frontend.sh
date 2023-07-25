@@ -28,9 +28,14 @@ else
 fi
 
 
-# echo -n "Deplyoing in the nginx default loccation"
-# cd /usr/share/nginx/html
-# rm -rf *
+echo -n "Doing a cleanup"
+cd /usr/share/nginx/html
+rm -rf *
+if [ $? -eq 0 ]; then 
+        echo -e "\e[32m Success \e[0m"
+else
+        echo -e "\e[31m failure \e[0m"
+fi
 
 # echo -n "unzipping the content"
 # unzip /tmp/$component.zip
