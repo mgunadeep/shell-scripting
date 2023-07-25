@@ -46,12 +46,12 @@ status $?
 
 echo -n "Unzipping...:"
 cd /tmp
-unzip mongodb.zip &>> $logfile
+unzip mongodb.zip  &>> $logfile
 cd mongodb-main
 status $?
 
 echo -n "Injecting the schema.."
 mongo < catalogue.js &>> $logfile
-mongo < users.js
+mongo < users.js     &>> $logfile
 status $?
 
