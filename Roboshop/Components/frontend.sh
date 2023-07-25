@@ -23,7 +23,7 @@ yum install $webserver -y &>> $logfile
 status $?
 
 echo -n "Enabling the $component"
-systemctl enable nginx
+systemctl enable nginx &>> $logfile
 status $?
 
 echo -n "Starting the $component webserver"
