@@ -4,8 +4,8 @@ webserver=nginx
 component=frontend
 logfile=/tmp/frontend.log
 
-id -u 
-if [ id -u -ne 0 ]; then 
+root= "id -u" 
+if [ $root -ne 0 ]; then 
 echo "You should be a root to perform this or should have sudo privileage"
 fi
 
