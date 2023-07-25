@@ -28,7 +28,7 @@ else
 fi
 
 
-echo -n "Doing a cleanup"
+echo -n "Doing a cleanup:"
 cd /usr/share/nginx/html
 rm -rf *
 if [ $? -eq 0 ]; then 
@@ -37,8 +37,13 @@ else
         echo -e "\e[31m failure \e[0m"
 fi
 
-# echo -n "unzipping the content"
-# unzip /tmp/$component.zip
+echo -n "unzipping the content"
+unzip /tmp/$component.zip
+if [ $? -eq 0 ]; then 
+        echo -e "\e[32m Success \e[0m"
+else
+        echo -e "\e[31m failure \e[0m"
+fi
 
 # mv $component-main/* .
 # mv static/* .
