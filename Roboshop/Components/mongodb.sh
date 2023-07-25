@@ -20,7 +20,7 @@ echo -n "Setting up the $component repo's:"
 curl -s -o /etc/yum.repos.d/$component.repo https://raw.githubusercontent.com/stans-robot-project/$component/main/mongo.repo &>> $logfile
 status $?
 
-echo -n "Installing the $component:"
+echo -n "Installing the $component..:"
 yum install -y $component-org &>> $logfile
 status $?
 
@@ -28,11 +28,30 @@ echo -n "Enabling the $component:"
 systemctl enable mongod &>> $logfile
 status $?
 
-echo -n "Starting the $component service:"
+echo -n "Starting the $component service..:"
 systemctl start mongod
 status $?
 
-echo -n "Updating the IP and giving access to $component"
+echo -n "Updating the IP and giving access to $component:"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+status $?
+
+echo -n "Restarting the mongodb service...:"
+systemctl restart mongod
+stat $?
+
+echo -n "Downloading the schema...:"
+curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip" &>> $logfile
+status $?
+
+echo -n "Unzipping...:"
+cd /tmp
+unzip mongodb.zip
+cd mongodb-main
+status $?
+
+echo -n "Injecting the schema.."
+mongo < catalogue.js
+mongo < users.js
 status $?
 
