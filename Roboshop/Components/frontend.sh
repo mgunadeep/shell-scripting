@@ -44,20 +44,20 @@ echo -n "unzipping the content:"
 unzip /tmp/$component.zip &>> $logfile
 status $?
 
-echo -n "moving the content"
+echo -n "moving the content:"
 mv $component-main/* .
 mv static/* .
 status $?
 
-echo -n "removing the unneccesay files"
+echo -n "removing the unneccesay files:"
 rm -rf $component-main README.md
 status $?
 
-echo -n "Deploying the nginx in default location"
+echo -n "Deploying the nginx in default location:"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 status $?
 
-echo "Restarting the $component service"
+echo -n "Restarting the $component service:"
 systemctl restart $webserver
 status $?
 
