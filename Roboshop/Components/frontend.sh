@@ -38,7 +38,7 @@ else
 fi
 
 echo -n "unzipping the content"
-unzip /tmp/$component.zip
+unzip /tmp/$component.zip &>> $logfile
 if [ $? -eq 0 ]; then 
         echo -e "\e[32m Success \e[0m"
 else
