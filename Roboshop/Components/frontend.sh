@@ -20,9 +20,14 @@ else
         echo -e "\e[31m failure \e[0m"
 fi
 
-echo -n "Downloading the $component content"
+echo -n "Downloading the $component content:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
-echo $? 
+if [ $? -eq 0 ]; then 
+        echo -e "\e[32m Success \e[0m"
+else
+        echo -e "\e[31m failure \e[0m"
+fi
+
 
 # echo -n "Deplyoing in the nginx default loccation"
 # cd /usr/share/nginx/html
