@@ -4,13 +4,15 @@ webserver=nginx
 component=frontend
 logfile=/tmp/frontend.log
 
-ID= "id -u"
+ID=$(id -u)
 if [ $ID -ne 0 ]; then 
-echo -e "\e[32m You should be a root to perform this or should have sudo privileage \e[0m"
+    echo -e "\e[32m You should be a root to perform this or should have sudo privileage \e[0m"
+    exit 1
 fi
 
-# echo "Installing $webserver"
-# yum install $webserver -y $ &>> $logfile
+
+echo "Installing $webserver"
+yum install $webserver -y $ &>> $logfile
 # echo $?
 # if[ $? -eq 0 ]; then 
 #     echo -e "\e[32m Success \0[m"
