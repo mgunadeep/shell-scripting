@@ -53,8 +53,8 @@ echo -n "removing the unneccesay files:"
 rm -rf $component-main README.md
 status $?
 
-echo -n "Deploying the nginx in default location:"
-mv localhost.conf /etc/nginx/default.d/roboshop.conf
+echo -n "Deploying the $component in default location:"
+mv localhost.conf /etc/$component/default.d/roboshop.conf
 status $?
 
 echo -n "Restarting the $component service:"
