@@ -15,9 +15,9 @@ echo "Installing $webserver"
 yum install nginx -y &>> /tmp/frontend.log
 
 if [ $? -eq 0 ]; then 
-        echo -e "\e[32m Success \e0[m"
+        echo -e "\e[32m Success \e[0m"
 else
-        echo -e "\e[31m failure \e0[m"
+        echo -e "\e[31m failure \e[0m"
 fi
 # echo -n "Downloading the $component html content"
 # curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
