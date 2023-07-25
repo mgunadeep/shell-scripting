@@ -19,9 +19,10 @@ if [ $? -eq 0 ]; then
 else
         echo -e "\e[31m failure \e[0m"
 fi
-# echo -n "Downloading the $component html content"
-# curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
-# echo $? 
+
+echo -n "Downloading the $component content"
+curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
+echo $? 
 
 # echo -n "Deplyoing in the nginx default loccation"
 # cd /usr/share/nginx/html
