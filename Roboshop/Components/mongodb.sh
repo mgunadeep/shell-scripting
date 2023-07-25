@@ -16,8 +16,12 @@ status () {
     fi
 }
 
-echo -n "Setting up the $component repo's"
-yum install -y $component-org &>> $logfile
+echo -n "Setting up the $component repo's:"
+curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo &>> $logfile
+status $?
+
+echo -n "Installing the mongodb:"
+yum install -y mongodb-org &>> $logfile
 status $?
 
 echo -n "Enabling the $component"
