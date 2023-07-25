@@ -14,7 +14,7 @@ fi
 echo "Installing $webserver"
 yum install nginx -y &>> /tmp/frontend.log
 
-if[ $? -eq 0 ]; then 
+if [ $? -eq 0 ]; then 
         echo -e "\e[32m Success \e0[m"
 else
         echo -e "\e[31m failure \e0[m"
