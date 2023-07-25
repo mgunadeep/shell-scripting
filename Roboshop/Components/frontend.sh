@@ -11,28 +11,28 @@ fi
 
 echo "Installing $webserver"
 yum install $webserver -y $ &>> $logfile
-echo $?
-if[ $? -eq 0 ]; then 
-    echo -e "\e[32m Success \0[m"
-else
-    echo -e "\e[31m failure \0[m"
-fi
+# echo $?
+# if[ $? -eq 0 ]; then 
+#     echo -e "\e[32m Success \0[m"
+# else
+#     echo -e "\e[31m failure \0[m"
+# fi
 
-echo -n "Downloading the $component html content"
-curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
-echo $? 
+# echo -n "Downloading the $component html content"
+# curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
+# echo $? 
 
-echo -n "Deplyoing in the nginx default loccation"
-cd /usr/share/nginx/html
-rm -rf *
+# echo -n "Deplyoing in the nginx default loccation"
+# cd /usr/share/nginx/html
+# rm -rf *
 
-echo -n "unzipping the content"
-unzip /tmp/$component.zip
+# echo -n "unzipping the content"
+# unzip /tmp/$component.zip
 
-mv $component-main/* .
-mv static/* .
-rm -rf $component-main README.md
-mv localhost.conf /etc/nginx/default.d/roboshop.conf
+# mv $component-main/* .
+# mv static/* .
+# rm -rf $component-main README.md
+# mv localhost.conf /etc/nginx/default.d/roboshop.conf
 
 
 
