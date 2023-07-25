@@ -22,11 +22,11 @@ echo -n "Installing $webserver:"
 yum install $webserver -y &>> $logfile
 status $?
 
-echo -n "Enabling the $component"
+echo -n "Enabling the $component:"
 systemctl enable nginx &>> $logfile
 status $?
 
-echo -n "Starting the $component webserver"
+echo -n "Starting the $component webserver:"
 systemctl start nginx
 status $?
 
