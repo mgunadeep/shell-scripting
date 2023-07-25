@@ -24,7 +24,7 @@ status $?
 
 echo -n "Downloading the $component content:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
-Status $?
+status $?
 
 
 echo -n "Doing a cleanup:"
