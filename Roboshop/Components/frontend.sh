@@ -12,14 +12,12 @@ fi
 
 
 echo "Installing $webserver"
-yum install nginx -y 
-# echo $?
-# if[ $? -eq 0 ]; then 
-#     echo -e "\e[32m Success \0[m"
-# else
-#     echo -e "\e[31m failure \0[m"
-# fi
-
+yum install nginx -y &>> $logfile
+    if[ $? -eq 0 ]; then 
+        echo -e "\e[32m Success \0[m"
+    else
+        echo -e "\e[31m failure \0[m"
+    fi
 # echo -n "Downloading the $component html content"
 # curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 # echo $? 
