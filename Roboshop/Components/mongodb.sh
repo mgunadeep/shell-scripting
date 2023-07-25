@@ -52,7 +52,7 @@ cd mongodb-main
 status $?
 
 echo -n "Injecting the schema.."
-mongo < catalogue.js &>> $logfile
-mongo < users.js     &>> $logfile
+mongo < catalogue.js 
+mongo < users.js     
 status $?
 
