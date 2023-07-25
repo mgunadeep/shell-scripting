@@ -4,7 +4,7 @@ logfile=/tmp/$component.log
 
 ID=$(id -u)
 if [ $ID -ne 0 ]; then 
-    echo -e "\e[31m You should be a root to perform this or should have sudo privileage \e[0m"
+    echo -e "\e[31m You should be a "root" to perform this action or should obtain, "sudo" privileages \e[0m"
     exit 1
 fi
 
@@ -13,6 +13,7 @@ status () {
             echo -e "\e[32m Success \e[0m"
     else
             echo -e "\e[31m failure \e[0m"
+            exit 2
     fi
 }
 
@@ -32,7 +33,7 @@ echo -n "Starting the $component service..:"
 systemctl start mongod
 status $?
 
-echo -n "Updating the IP and giving access to $component:"
+echo -n "Updating the IP and giving DB access to other internal components:"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 status $?
 
@@ -40,7 +41,7 @@ echo -n "Restarting the mongodb service...:"
 systemctl restart mongod
 status $?
 
-echo -n "Downloading the schema...:"
+echo -n "Downloading the schema:"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip" &>> $logfile
 status $?
 
