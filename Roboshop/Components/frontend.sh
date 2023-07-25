@@ -12,7 +12,7 @@ fi
 
 
 echo "Installing $webserver"
-yum install nginx -y $ &>> $logfile
+yum install nginx -y &>> $logfile
 # echo $?
 # if[ $? -eq 0 ]; then 
 #     echo -e "\e[32m Success \0[m"
