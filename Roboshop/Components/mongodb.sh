@@ -32,6 +32,6 @@ echo -n "Starting the $component service:"
 systemctl start mongod
 status $?
 
-sed -i -e 's/127.0.0.1/0.0.0.0/' etc/mongod.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 status $?
 
