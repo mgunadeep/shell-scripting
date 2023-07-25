@@ -22,6 +22,14 @@ echo -n "Installing $webserver:"
 yum install $webserver -y &>> $logfile
 status $?
 
+echo -n "Enabling the $component"
+systemctl enable $component
+status $?
+
+echo -n "Starting the $component webserver"
+systemctl start $component
+status $?
+
 echo -n "Downloading the $component content:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 status $?
@@ -36,14 +44,21 @@ echo -n "unzipping the content:"
 unzip /tmp/$component.zip &>> $logfile
 status $?
 
+echo -n "moving the content"
+mv $component-main/* .
+mv static/* .
+status $?
 
-# mv $component-main/* .
-# mv static/* .
-# rm -rf $component-main README.md
-# mv localhost.conf /etc/nginx/default.d/roboshop.conf
+echo -n "removing the unneccesay files"
+rm -rf $component-main README.md
+status $?
 
+echo -n "Deploying the nginx in default location"
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+status $?
 
-
-
+echo "Restarting the $component service"
+systemctl restart $webserver
+Status $?
 
 
