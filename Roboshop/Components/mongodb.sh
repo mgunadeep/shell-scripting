@@ -21,7 +21,7 @@ curl -s -o /etc/yum.repos.d/$component.repo https://raw.githubusercontent.com/st
 status $?
 
 echo -n "Installing the $component:"
-yum install -y mongodb-org &>> $logfile
+yum install -y $component-org &>> $logfile
 status $?
 
 echo -n "Enabling the $component:"
