@@ -5,7 +5,7 @@ component=frontend
 logfile=/tmp/frontend.log
 
 ID= "id -u" 
-if [ $root -ne 0 ]; then 
+if [ $ID -ne 0 ]; then 
 echo "You should be a root to perform this or should have sudo privileage"
 fi
 
