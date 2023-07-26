@@ -40,12 +40,12 @@ status $?
 
 echo -n "Unzipping..."
 cd /home/$user
-unzip /tmp/$component.zip &>> $logfile
+unzip -o /tmp/$component.zip &>> $logfile
 
 echo -n "Renaming the file:"
 mv $component-main $component
 status $?
 
 echo -n "Modifying the ownership"
-chown -R $user:$user /home/Roboshop/Components/$component
+chown -R $user : $user /Roboshop/Components/$component
 status $?
