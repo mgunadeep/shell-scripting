@@ -48,4 +48,3 @@ status $?
 echo -n "Modifying the ownership"
 chown -R $user:$user /home/Roboshop/$component
 status $?
-
