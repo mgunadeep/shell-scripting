@@ -1,5 +1,7 @@
 #!/bin/bash
+
 component=redis
+
 source components/common.sh
 
 echo -n "Configuring the repo:"
