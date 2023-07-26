@@ -2,23 +2,8 @@
 
 user=roboshop
 component=catalogue
-logfile=/tmp/$component.log
 
-
-ID=$(id -u)
-if [ $ID -ne 0 ]; then 
-    echo -e "\e[31m You should be a "root" to perform this action or should obtain, "sudo" privileages. \e[0m"
-    exit 1
-fi
-
-status () {
-    if [ $1 -eq 0 ]; then 
-            echo -e "\e[32m Success \e[0m"
-    else
-            echo -e "\e[31m failure \e[0m"
-            exit 2
-    fi
-}
+source components/common.sh
 
 echo -n "Configuring the repo"
 curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>> $logfile
