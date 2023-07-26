@@ -52,32 +52,32 @@ echo -n "Renaming the file:"
 mv $component-main $component
 status $?
 
-echo -n "Downloading the necessary dependencies"
+echo -n "Downloading the necessary dependencies..:"
 cd /home/roboshop/catalogue
 npm install  &>> $logfile
 status $?
 
-echo -n "updating the systemd file"
+echo -n "updating the systemd file:"
 sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/$component/systemd.service
 status $?
 
-echo -n "Settingup with "systemctl".."
+echo -n "Settingup with "systemctl"..:"
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 status $?
 
-echo -n "Reloading the service"
+echo -n "Reloading the service.."
 systemctl daemon-reload
 status $?
 
-echo -n "Enabling the catalogue"
+echo -n "Enabling the catalogue..:"
 systemctl enable catalogue &>> $logfile
 status $?
 
-echo -n "restarting the catalogue"
+echo -n "restarting the catalogue..:"
 systemctl restart catalogue
 status $?
 
-echo -n "Checking the status of the catalogue"
+echo -n "Checking the status of the catalogue:"
 systemctl status catalogue -l  &>> $logfile
 status $?
 
