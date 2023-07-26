@@ -28,11 +28,8 @@ yum install nodejs -y &>> $logfile
 status $?
 
 echo -n "Creating a service account:"
-useradd $user
+useradd roboshop
 status $?
-
-echo -n "Granting the necessary permissions"
-chmod 777 $component.sh
 
 # echo -n "Changing the ownership"
 # chown -R $user SHELL-SCRIPTING/Roboshop/Components/$component.sh
@@ -41,6 +38,10 @@ chmod 777 $component.sh
 
 echo -n "Switching to the service account-"$user":"
 sudo su - $user
+status $?
+
+echo -n "Granting the necessary permissions"
+sudo chmod 777 $component.sh
 status $?
 
 echo -n "Downloading the $component code:"
