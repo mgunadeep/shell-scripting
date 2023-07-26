@@ -61,14 +61,14 @@ echo -n "Restarting the $component service:"
 systemctl restart $webserver
 status $?
 
-echo -n "Updating the Catalogue DNS in reverseproxy file"
+echo -n "Updating the Catalogue DNS in reverseproxy file:"
 for component in catalogue ;
 do 
     sed -i -e "/$component/s/localhost/$component.roboshop.internal/"  /etc/nginx/default.d/roboshop.conf
 done
 status $?
 
-echo -n "Restarting the $component"
+echo -n "Restarting the $component:"
 systemctl daemon-reload
 systemctl enable nginx &>> $logfile
 systemctl restart nginx
