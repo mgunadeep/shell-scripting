@@ -78,6 +78,6 @@ systemctl restart catalogue
 status $?
 
 echo -n "Checking the status of the catalogue"
-systemctl status catalogue -l
+systemctl status catalogue -l  &>> $logfile
 status $?
 
