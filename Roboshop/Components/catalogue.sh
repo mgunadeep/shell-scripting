@@ -28,7 +28,7 @@ yum install nodejs -y &>> $logfile
 status $?
 
 id $user &>> $logfile
-if [ $? -ne 0 ]; then              ### This function is written-to take care of exception handling. So, if the service accnt is already created it doesn't do anything. But, if the service account is not created it creates a new one.
+if [ $? -ne 0 ]; then              ### This function is written-to take care of exception handling. So, if the service accnt is already created it doesn't do anything. But, if the service account is not created, then it creates a new one.
 echo -n "Creating a service account:"
 useradd $user &>> $logfile
 status $?
@@ -57,4 +57,27 @@ cd /home/roboshop/catalogue
 npm install  &>> $logfile
 status $?
 
+echo -n "updating the systemd file"
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/$component/systemd.service
+status $?
+
+echo -n "Settingup with "systemctl".."
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+status $?
+
+echo -n "Reloading the service"
+systemctl daemon-reload
+status $?
+
+echo -n "Enabling the catalogue"
+systemctl enable catalogue &>> $logfile
+status $?
+
+echo -n "restarting the catalogue"
+systemctl restart catalogue
+status $?
+
+echo -n "Checking the status of the catalogue"
+systemctl status catalogue -l
+status $?
 
