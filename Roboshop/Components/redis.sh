@@ -22,5 +22,5 @@ curl -L https://raw.githubusercontent.com/stans-robot-project/redis/main/redis.r
 status $?
 
 echo -n "Installing the $component"
-yum install redis-6.2.11 -y &>>logfile
+yum install redis - 6.2.11 -y &>>logfile
 status $?
