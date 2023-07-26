@@ -28,7 +28,7 @@ yum install nodejs -y &>> $logfile
 status $?
 
 id $user &>> $logfile
-if [ $? -ne 0 ]; then 
+if [ $? -ne 0 ]; then              ### This function is written-to take care of exception handling. So, if the service accnt is already created it doesn't do anything. But, if the service account is not created it creates a new one.
 echo -n "Creating a service account:"
 useradd $user &>> $logfile
 status $?
@@ -40,11 +40,12 @@ status $?
 
 echo -n "Unzipping..."
 cd /home/$user
-rm -rf $component  &>> $logfile
+rm -rf $component  &>> $logfile     ### This deletes the already downloaded component(catalogue) code file, so if the developer updates the code by adding new features...even before downloading a new file, it deletes the already existing or downloaded file,whhich contains the previous code.
 unzip -o /tmp/$component.zip &>> $logfile
+status $?
 
 # echo -n "Modifying the ownership"
-# chown -R $user:$user /home/Roboshop/$component
+# chown -R $user:$user 
 # status $?
 
 echo -n "Renaming the file:"
@@ -55,4 +56,5 @@ echo -n "Downloading the necessary dependencies"
 cd /home/roboshop/catalogue
 npm install  &>> $logfile
 status $?
+
 
