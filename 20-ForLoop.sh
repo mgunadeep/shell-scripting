@@ -8,7 +8,7 @@
 # done
 
 # Below, is how you declare a range, 
-for x in {1..10}
+for x in {1..10};   ## ==>> For variable "x" in the "list" {1 to 10}
 do 
     echo $x
 done
