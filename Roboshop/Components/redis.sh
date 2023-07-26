@@ -1,7 +1,5 @@
 #!/bin/bash
-
 component=redis
-
 source components/common.sh
 
 echo -n "Configuring the repo:"
@@ -13,10 +11,11 @@ yum install $component-6.2.11 -y  &>> $logfile
 status $?
 
 echo -n "Updating the bindIP address:"
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$component.conf /etc/$component/$component.conf &>> $logfile
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$component.conf &>> $logfile
 status $?
 
 echo -n "Starting the $component:"
+systemctl daemon-reload
 systemctl enable $component &>> $logfile
 systemctl start $component
 status $?
