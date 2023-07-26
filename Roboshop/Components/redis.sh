@@ -11,14 +11,14 @@ echo -n "Installing $COMPONENT : "
 yum install -y ${COMPONENT}-6.2.11   &>> $LOGFILE
 stat $? 
 
-# echo -n "Enabling the DB visibility :"
-# sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/${COMPONENT}.conf
-# sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/${COMPONENT}/${COMPONENT}.conf
-# stat $? 
+echo -n "Enabling the DB visibility :"
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/${COMPONENT}.conf
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/${COMPONENT}/${COMPONENT}.conf
+stat $? 
 
-# echo -n "Starting $COMPONENT : "
-# systemctl daemon-reload $COMPONENT      &>> $LOGFILE
-# systemctl enable $COMPONENT      &>> $LOGFILE
-# systemctl restart $COMPONENT       &>> $LOGFILE
-# stat $?
+echo -n "Starting $COMPONENT : "
+systemctl daemon-reload $COMPONENT      &>> $LOGFILE
+systemctl enable $COMPONENT      &>> $LOGFILE
+systemctl restart $COMPONENT       &>> $LOGFILE
+stat $?
 
