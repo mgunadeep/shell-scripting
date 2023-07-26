@@ -1,7 +1,6 @@
 #!/bin/bash
 
-user=roboshopg
-
+user=roboshop
 component=catalogue
 logfile=/tmp/$component.log
 
