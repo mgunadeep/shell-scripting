@@ -32,6 +32,7 @@ if [ $? -ne 0 ]; then
 echo -n "Creating a service account:"
 useradd $user &>> $logfile
 status $?
+fi
 
 echo -n "Downloading the $component code:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
