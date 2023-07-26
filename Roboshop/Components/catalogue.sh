@@ -31,6 +31,11 @@ echo -n "Creating a service account:"
 useradd $user
 status $?
 
+echo -n "Changing the ownership"
+chown -R $user /Roboshop/Components/$component.sh
+exit 1
+status $?
+
 echo -n "Switching to the service account-"$user":"
 sudo su - $user
 status $?
