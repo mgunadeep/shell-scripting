@@ -32,6 +32,12 @@ echo -n "Switching to the service account-"$user":"
 sudo su - $user
 status $?
 
+ID=$(id -u)
+if [ $ID -ne 1001 ]; then 
+    echo -e "\e[31m You should be a "$user" to perform this action. \e[0m"
+    exit 1
+fi
+
 echo -n "Downloading the $component code:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 status $?
