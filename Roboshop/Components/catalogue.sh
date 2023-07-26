@@ -43,10 +43,11 @@ cd /home/$user
 rm -rf $component  &>> $logfile
 unzip -o /tmp/$component.zip &>> $logfile
 
+echo -n "Modifying the ownership"
+chown -R $user:$user /home/Roboshop/$component
+status $?
+
 echo -n "Renaming the file:"
 mv $component-main $component
 status $?
 
-echo -n "Modifying the ownership"
-chown -R $user:$user /home/Roboshop/$component
-status $?
