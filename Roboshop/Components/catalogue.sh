@@ -19,30 +19,30 @@ status () {
     fi
 }
 
-echo -n "Configuring the repo"
-curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>> $logfile
-status $?
+# echo -n "Configuring the repo"
+# curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>> $logfile
+# status $?
 
-echo -n "Installing the nodejs.."
-yum install nodejs -y &>> $logfile
-status $?
+# echo -n "Installing the nodejs.."
+# yum install nodejs -y &>> $logfile
+# status $?
 
-echo -n "Creating a service account:"
-useradd roboshop
-status $?
+# echo -n "Creating a service account:"
+# useradd roboshop
+# status $?
 
 # echo -n "Changing the ownership"
 # chown -R $user SHELL-SCRIPTING/Roboshop/Components/$component.sh
 # exit 1
 # status $?
 
-echo -n "Switching to the service account-"$user":"
-sudo su - $user
-status $?
+# echo -n "Switching to the service account-"$user":"
+# sudo su - $user
+# status $?
 
-echo -n "Granting the necessary permissions"
-sudo chmod 777 $component.sh
-status $?
+# echo -n "Granting the necessary permissions"
+# sudo chmod 777 $component.sh
+# status $?
 
 echo -n "Downloading the $component code:"
 curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
