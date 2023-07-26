@@ -37,23 +37,23 @@ echo -n "Updating the IP and giving DB access to other internal components:"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 status $?
 
-echo -n "Restarting the mongodb service...:"
+echo -n "Restarting the $component service...:"
 systemctl daemon-reload mongod
 systemctl enable mongod  &>> $logfile
 systemctl restart mongod 
 status $?
 
-echo -n "Downloading the schema:"
-curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip" &>> $logfile
+echo -n "Downloading the $component schema:"
+curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 status $?
 
 echo -n "Unzipping...:"
 cd /tmp
-unzip mongodb.zip  &>> $logfile
-cd mongodb-main
+unzip $component.zip  &>> $logfile
 status $?
 
 echo -n "Injecting the schema.."
+cd $component-main
 mongo < catalogue.js &>> $logfile
 mongo < users.js     &>> $logfile
 status $?
