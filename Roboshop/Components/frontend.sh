@@ -2,7 +2,7 @@
 
 webserver=nginx
 component=frontend
-logfile=/tmp/frontend.log
+logfile=/tmp/$component.log
 
 ID=$(id -u)
 if [ $ID -ne 0 ]; then 

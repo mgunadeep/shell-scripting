@@ -1,8 +1,9 @@
 #!/bin/bash
 
+user=roboshop
 component=catalogue
 logfile=/tmp/$component.log
-user=roboshop
+
 
 ID=$(id -u)
 if [ $ID -ne 0 ]; then 
