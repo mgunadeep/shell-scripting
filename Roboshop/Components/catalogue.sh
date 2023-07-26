@@ -53,6 +53,6 @@ status $?
 
 echo -n "Downloading the necessary dependencies"
 cd /home/roboshop/catalogue
-npm install
+npm install  &>> $logfile
 status $?
 
