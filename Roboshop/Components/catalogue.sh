@@ -40,6 +40,7 @@ status $?
 
 echo -n "Unzipping..."
 cd /home/$user
+rm -rf $component  &>> $logfile
 unzip -o /tmp/$component.zip &>> $logfile
 
 echo -n "Renaming the file:"
