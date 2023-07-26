@@ -21,7 +21,7 @@ status () {
 
 echo -n "Installing the nodejs.."
 curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>> $logfile
-yum install nodejs -y
+yum install nodejs -y &>> $logfile
 status $?
 
 echo -n "Creating a service account:"
