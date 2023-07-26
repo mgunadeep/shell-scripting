@@ -46,5 +46,5 @@ mv $component-main $component
 status $?
 
 echo -n "Modifying the ownership"
-chown -R $user:$user /home/Roboshop/$component
+chown -R $user:$user /home/Roboshop/Components/$component
 status $?
