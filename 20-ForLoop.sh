@@ -1,9 +1,9 @@
 #!/bin/bash
 
-for variable in list;
-do
-    # commands to be executed for each value in the list
-done
+# for variable in list;
+# do
+#     # commands to be executed for each value in the list
+# done
 
 
 ## variable "x" becomes every number in each iteration in the given "list" of "1 to 5".
