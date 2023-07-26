@@ -53,7 +53,7 @@ mv $component-main $component
 status $?
 
 echo -n "Downloading the necessary dependencies..:"
-cd /home/roboshop/catalogue
+cd /home/roboshop/$component
 npm install  &>> $logfile
 status $?
 
@@ -62,22 +62,22 @@ sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/$component
 status $?
 
 echo -n "Settingup with "systemctl"..:"
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+mv /home/roboshop/$component/systemd.service /etc/systemd/system/$component.service
 status $?
 
 echo -n "Reloading the service.."
 systemctl daemon-reload
 status $?
 
-echo -n "Enabling the catalogue..:"
-systemctl enable catalogue &>> $logfile
+echo -n "Enabling the $component..:"
+systemctl enable $component &>> $logfile
 status $?
 
-echo -n "restarting the catalogue..:"
-systemctl restart catalogue
+echo -n "restarting the $component..:"
+systemctl restart $component
 status $?
 
-echo -n "Checking the status of the catalogue:"
-systemctl status catalogue -l  &>> $logfile
+echo -n "Checking the status of the $component:"
+systemctl status $component -l  &>> $logfile
 status $?
 
