@@ -1,4 +1,5 @@
 #!/bin/bash
+
 component=redis
 source components/common.sh
 
