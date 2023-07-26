@@ -27,13 +27,10 @@ echo -n "Installing the nodejs.."
 yum install nodejs -y &>> $logfile
 status $?
 
+id $user &>> $logfile
+if [ $? -ne 0 ]; then 
 echo -n "Creating a service account:"
-useradd roboshop
-status $?
-
-echo -n "Changing the ownership"
-chown -R $user : $user /Roboshop/Components/$component.sh
-exit 1
+useradd $user &>> $logfile
 status $?
 
 echo -n "Downloading the $component code:"
@@ -46,6 +43,10 @@ unzip /tmp/$component.zip &>> $logfile
 
 echo -n "Renaming the file:"
 mv $component-main $component
+status $?
+
+echo -n "Modifying the ownership"
+chown -R $user:$user /home/roboshop/$component
 status $?
 
 echo -n "Installing the necessary dependencies.."
