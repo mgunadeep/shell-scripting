@@ -49,7 +49,7 @@ echo -n "Modifying the ownership"
 chown -R $user:$user /home/roboshop/$component
 status $?
 
-echo -n "Installing the necessary dependencies.."
-cd /home/$user/$component
-npm install &>> $logfile
-status $?
+# echo -n "Installing the necessary dependencies.."
+# cd /home/$user/$component
+# npm install &>> $logfile
+# status $?
