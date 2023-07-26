@@ -31,17 +31,9 @@ echo -n "Creating a service account:"
 useradd roboshop
 status $?
 
-# echo -n "Changing the ownership"
-# chown -R $user SHELL-SCRIPTING/Roboshop/Components/$component.sh
-# exit 1
-# status $?
-
-# echo -n "Granting the necessary permissions"
-# sudo chmod 777 $component.sh
-# status $?
-
-echo -n "Switching to the service account-"$user":"
-sudo su - $user
+echo -n "Changing the ownership"
+chown -R $user : $user /Roboshop/Components/$component.sh
+exit 1
 status $?
 
 echo -n "Downloading the $component code:"
