@@ -40,6 +40,6 @@ systemctl restart $component
 status $?
 
 echo -n "Checking the status:"
-systemctl status redis -l
+systemctl status redis -l &>>logfile
 status $?
 
