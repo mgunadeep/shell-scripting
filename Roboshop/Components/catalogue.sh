@@ -32,7 +32,7 @@ useradd $user
 status $?
 
 echo -n "Changing the ownership"
-chown -R $user /Roboshop/Components/$component.sh
+chown -R $user SHELL-SCRIPTING/Roboshop/Components/$component.sh
 exit 1
 status $?
 
