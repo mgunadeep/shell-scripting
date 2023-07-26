@@ -49,7 +49,7 @@ status $?
 
 echo -n "Unzipping...:"
 cd /tmp
-unzip $component.zip  &>> $logfile
+unzip -o $component.zip  &>> $logfile
 status $?
 
 echo -n "Injecting the schema.."
