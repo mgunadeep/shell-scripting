@@ -51,12 +51,6 @@ cd /home/roboshop/user
 npm install &>> $logfile
 status $?
 
-
-
-
-
-
 echo -n "Modifying the ownership:"
-mv $COMPONENT-main/ $COMPONENT
-chown -R $user:$user /home/roboshop/$COMPONENT/
+chown -R $user:$user /home/roboshop/$component/
 stat $?
