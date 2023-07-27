@@ -1,6 +1,7 @@
 #!/bin/bash
 
 user=roboshop
+component=User
 logfile=/tmp/$component.log
 
 ID=$(id -u)
@@ -32,3 +33,30 @@ useradd $user &>> $logfile
 fi
 status $?
 
+echo -n "Downloading the $component code:"
+curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/user/archive/main.zip" &>> $logfile
+status $?
+
+echo -n "Unzipping..:"
+cd /home/roboshop
+unzip /tmp/user.zip &>> $logfile
+status $?
+
+echo -n "Renaming the file:"
+mv user-main user
+status $?
+
+echo -n "Installing the necessary dependencies and generating the artifact:"
+cd /home/roboshop/user
+npm install &>> $logfile
+status $?
+
+
+
+
+
+
+echo -n "Modifying the ownership:"
+mv $COMPONENT-main/ $COMPONENT
+chown -R $user:$user /home/roboshop/$COMPONENT/
+stat $?
