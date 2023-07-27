@@ -21,7 +21,7 @@ curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>
 status $?
 
 echo -n "Installing the nodejs:"
-yum install nodejs -y
+yum install nodejs -y &>> $logfile
 status $?
 
 id $appuser  &>> $logfile
