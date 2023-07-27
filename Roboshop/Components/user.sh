@@ -55,3 +55,21 @@ status $?
 echo -n "Modifying the ownership:"
 chown -R $user:$user /home/roboshop/$component/
 stat $?
+
+echo -n "Updating the Redis and MongoDB DNS:"
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/'  /home/roboshop/user/systemd.service  
+sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/roboshop/user/systemd.service 
+status $?
+
+echo -n "Reloading the $component:"
+systemctl daemon-reload
+status $?
+
+echo -n "Starting the $component:"
+systemctl enable $component &>> $logfile
+systemctl restart $component
+status $?
+
+echo -n "Checking the $component status"
+systemctl status $component -l
+status $?
