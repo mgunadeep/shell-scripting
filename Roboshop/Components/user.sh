@@ -40,7 +40,7 @@ status $?
 
 echo -n "Unzipping..:"
 cd /home/roboshop
-unzip /tmp/user.zip &>> $logfile
+unzip -o /tmp/user.zip &>> $logfile
 status $?
 
 echo -n "Renaming the file:"
@@ -73,3 +73,4 @@ status $?
 echo -n "Checking the $component status"
 systemctl status $component -l
 status $?
+
