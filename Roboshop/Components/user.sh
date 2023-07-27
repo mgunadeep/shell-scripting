@@ -36,7 +36,7 @@ curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/user/archive
 status $?
 
 echo -n "Unzipping..:"
-cd cd /home/roboshop
+cd /home/roboshop
 unzip /tmp/user.zip &>> $logfile
 status $?
 
