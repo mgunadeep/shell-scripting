@@ -62,6 +62,10 @@ sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/'  /home/roboshop/user/syste
 sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/roboshop/user/systemd.service 
 status $?
 
+echo -n "Settingup the service with systemctl:"
+mv /home/roboshop/user/systemd.service  /etc/systemd/system/user.service
+status $?
+
 echo -n "Reloading the $component:"
 systemctl daemon-reload
 status $?
