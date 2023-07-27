@@ -58,8 +58,8 @@ npm install &>> $logfile
 status $?
 
 echo -n "Updating the Redis and MongoDB DNS:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/'  /home/roboshop/user/systemd.service  
-sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/roboshop/user/systemd.service 
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e /home/roboshop/user/systemd.service  
+sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' -e /home/roboshop/user/systemd.service 
 status $?
 
 echo -n "Settingup the service with systemctl:"
