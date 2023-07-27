@@ -53,9 +53,9 @@ cd /home/roboshop/user
 npm install &>> $logfile
 status $?
 
-echo -n "Modifying the ownership:"
-chown -R $user:$user /home/roboshop/$component/
-stat $?
+# echo -n "Modifying the ownership:"
+# chown -R $user:$user /home/roboshop/$component/
+# stat $?
 
 echo -n "Updating the Redis and MongoDB DNS:"
 sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/'  /home/roboshop/user/systemd.service  
