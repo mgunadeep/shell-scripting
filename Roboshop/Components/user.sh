@@ -40,6 +40,7 @@ status $?
 
 echo -n "Unzipping..:"
 cd /home/roboshop
+rm -rf $component  &>> $logfile
 unzip -o /tmp/user.zip &>> $logfile
 status $?
 
