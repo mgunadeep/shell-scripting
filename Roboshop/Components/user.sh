@@ -37,6 +37,10 @@ echo -n "Downloading the $component code:"
 curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 status $?
 
+echo -n "Changing the ownership:"
+chown -R roboshop:roboshop user
+status $?
+
 echo -n "Unzipping..:"
 cd /home/$appuser
 rm -rf $component  &>> $logfile
