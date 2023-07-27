@@ -4,7 +4,7 @@ component=user
 logfile=/tmp/$component.log
 
 ID=$(id -u) 
-if [ ID -ne 0 ]; then
+if [ $ID -ne 0 ]; then
     echo -e "\e[31m You should be a root to perform this action or should obtain sudo previliages \e[0m"
 fi
 
