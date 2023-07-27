@@ -1,6 +1,6 @@
 #!/bin/bash
 
-user=roboshop
+appuser=roboshop
 component=User
 logfile=/tmp/$component.log
 
@@ -26,10 +26,10 @@ echo -n "Installing the nodejs:"
 yum install nodejs -y &>> $logfile
 status $?
 
-id $user &>> $logfile
+id $appuseruser &>> $logfile
 if [ $? -ne 0 ]; then              ### This function is written-to take care of exception handling. So, if the service accnt is already created it doesn't do anything. But, if the service account is not created, then it creates a new one.
 echo -n "Creating a service account:"
-useradd $user &>> $logfile
+useradd $appuser &>> $logfile
 status $?
 fi
 
@@ -39,7 +39,7 @@ curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/user/archive
 status $?
 
 echo -n "Unzipping..:"
-cd /home/roboshop
+cd /home/$appuser
 rm -rf $component  &>> $logfile
 unzip -o /tmp/user.zip &>> $logfile
 status $?
@@ -49,7 +49,7 @@ mv user-main user
 status $?
 
 echo -n "Installing the necessary dependencies and generating the artifact:"
-cd /home/roboshop/user
+cd /home/$appuser/user
 npm install &>> $logfile
 status $?
 
