@@ -1,6 +1,6 @@
 #!/bin/bash
 
-component=user
+user=roboshop
 logfile=/tmp/$component.log
 
 ID=$(id -u)
