@@ -76,6 +76,6 @@ systemctl restart $component
 status $?
 
 echo -n "Checking the $component status"
-systemctl status $component -l
+systemctl status $component -l  &>> $logfile
 status $?
 
