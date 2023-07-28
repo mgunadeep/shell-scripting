@@ -52,12 +52,12 @@ npm install  &>> $logfile
 status $?
 
 echo -n "Updating the systemD files:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' /home/$appuser/user/systemd.service
-sed -i -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' /home/$appuser/user/systemd.service
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' /home/$appuser/cart/systemd.service
+sed -i -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' /home/$appuser/cart/systemd.service
 status $?
 
-echo -n "Settingup the service with systemctl:"
-mv /home/roboshop/user/systemd.service /etc/systemd/system/user.service
+echo -n "SettingUp the service with systemctl:"
+mv /home/roboshop/cart/systemd.service /etc/systemd/system/user.service
 status $?
 
 echo -n "Reloading the service:"
