@@ -51,7 +51,7 @@ chown -R $appuser:$appuser user
 status $?
 
 echo -n "Installing the necessary dependencies:"
-cd /home/roboshop/components/user
+cd /home/roboshop/$component
 npm install  &>> $logfile
 status $?
 
