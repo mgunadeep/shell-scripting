@@ -51,12 +51,13 @@ chown -R $appuser:$appuser user
 status $?
 
 echo -n "Installing the necessary dependencies:"
-cd /home/roboshop/user
+cd /home/roboshop/components/user
 npm install  &>> $logfile
 status $?
 
 echo -n "Updating the systemD files:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/roboshop/user/systemd.service
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' /home/roboshop/user/systemd.service
+sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/roboshop/user/systemd.service
 status $?
 
 echo -n "Settingup the service with systemctl:"
