@@ -33,31 +33,31 @@ if [ $? -ne 0 ]; then
 fi
 
 echo -n "Downloading the $component file:"
-curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/user/archive/main.zip" &>> $logfile
+curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$component/archive/main.zip" &>> $logfile
 status $?
 
 echo -n "Unzipping..:"
 cd /home/$appuser
 rm -rf $component
-unzip -o /tmp/user.zip &>> $logfile
+unzip -o /tmp/$component.zip &>> $logfile
 status $?
 
 echo -n "Renaming the file:"
-mv -f user-main user
+mv -f $component-main $component
 status $?
 
 echo -n "Changing the permissions:"
-chown -R $appuser:$appuser user
+chown -R $appuser:$appuser $component
 status $?
 
 echo -n "Installing the necessary dependencies:"
-cd /home/roboshop/$component
+cd /home/$appuser/$component
 npm install  &>> $logfile
 status $?
 
 echo -n "Updating the systemD files:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' /home/roboshop/user/systemd.service
-sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/roboshop/user/systemd.service
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' /home/$appuser/user/systemd.service
+sed -i -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/$appuser/user/systemd.service
 status $?
 
 echo -n "Settingup the service with systemctl:"
