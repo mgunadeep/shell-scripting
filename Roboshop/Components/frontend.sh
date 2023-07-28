@@ -47,7 +47,7 @@ systemctl restart $webserver
 status $?
 
 echo -n "Updating the Backend DNS in reverseproxy file:"
-for component in catalogue ;
+for component in catalogue user ;
 do 
     sed -i -e "/$component/s/localhost/$component.roboshop.internal/"  /etc/nginx/default.d/roboshop.conf
 done
