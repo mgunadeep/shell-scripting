@@ -54,7 +54,7 @@ rm -rf $component-main README.md
 status $?
 
 echo -n "Deploying the $component in default location:"
-mv localhost.conf /etc/nginx/default.d/roboshop.conf
+mv localhost.conf /etc/$webserver/default.d/roboshop.conf
 status $?
 
 echo -n "Restarting the $component service:"
@@ -70,7 +70,7 @@ status $?
 
 echo -n "Restarting the $component:"
 systemctl daemon-reload
-systemctl enable nginx &>> $logfile
-systemctl restart nginx
+systemctl enable $webserver &>> $logfile
+systemctl restart $webserver
 status $?
 
