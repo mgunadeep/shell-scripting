@@ -39,7 +39,7 @@ status $?
 
 echo -n "Unzipping..:"
 rm -rf $component  &>> $logfile
-cd /home/roboshop
+cd /home/roboshop/
 unzip -o /tmp/cart.zip  &>> $logfile
 status $?
 
