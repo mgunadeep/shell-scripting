@@ -38,6 +38,7 @@ curl -s -L -o /tmp/cart.zip "https://github.com/stans-robot-project/cart/archive
 status $?
 
 echo -n "Unzipping..:"
+rm -rf $component  &>> $logfile
 cd /home/roboshop
 unzip -o /tmp/cart.zip  &>> $logfile
 status $?
@@ -52,7 +53,7 @@ npm install  &>> $logfile
 status $?
 
 echo -n "Updating the systemD file:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' systemd.service
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' /home/roboshop/cart
 status $?
 
 echo -n "Setting up with systemctl:"
