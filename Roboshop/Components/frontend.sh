@@ -40,7 +40,7 @@ rm -rf *
 status $?
 
 echo -n "unzipping the content:"
-unzip /tmp/$component.zip &>> $logfile
+unzip -o /tmp/$component.zip &>> $logfile
 status $?
 
 echo -n "moving the content:"
