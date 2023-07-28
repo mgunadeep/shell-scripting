@@ -57,7 +57,7 @@ sed -i -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' /home/$appuser/car
 status $?
 
 echo -n "SettingUp the service with systemctl:"
-mv /home/roboshop/cart/systemd.service /etc/systemd/system/user.service
+mv /home/roboshop/cart/systemd.service /etc/systemd/system/$component.service
 status $?
 
 echo -n "Reloading the service:"
