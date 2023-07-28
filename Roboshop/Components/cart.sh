@@ -43,7 +43,7 @@ unzip -o /tmp/cart.zip  &>> $logfile
 status $?
 
 echo -n "Renaming the file:"
-mv cart-main cart
+mv -f cart-main cart
 status $?
 
 echo -n "Installing the necessary dependencies:"
@@ -52,8 +52,7 @@ npm install  &>> $logfile
 status $?
 
 echo -n "Updating the systemD file:"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' systemd.service
-sed -i -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' systemd.service
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' systemd.service
 status $?
 
 echo -n "Setting up with systemctl:"
