@@ -1,5 +1,6 @@
 #!/bin/bash
 
+component=frontend
 webserver=nginx
 logfile=/tmp/$component.log
 
