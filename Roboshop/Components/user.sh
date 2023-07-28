@@ -6,6 +6,7 @@ logfile=/tmp/$component.log
 ID=$(id -u) 
 if [ $ID -ne 0 ]; then
     echo -e "\e[31m You should be a root to perform this action or should obtain sudo previliages \e[0m"
+    exit 1
 fi
 
 status () {
@@ -26,7 +27,7 @@ status $?
 
 id $appuser  &>> $logfile
 if [ $? -ne 0 ]; then
-    echo "Creating the service account "$appuser":"
+    echo -n "Creating the service account:"
     useradd $appuser &>> $logfile
     status $?
 fi
@@ -36,12 +37,13 @@ curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/user/archive
 status $?
 
 echo -n "Unzipping..:"
-cd /home/roboshop
-unzip /tmp/user.zip &>> $logfile
+cd /home/$appuser
+rm -rf $component
+unzip -o /tmp/user.zip &>> $logfile
 status $?
 
 echo -n "Renaming the file:"
-mv user-main user
+mv -f user-main user
 status $?
 
 echo -n "Changing the permissions:"
