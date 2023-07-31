@@ -50,16 +50,16 @@ if [ $? -eq 0 ] ; then
 fi 
 
 
-echo -n "Downloading the $COMPONENT schema:"
-curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"   &>> $logfile
+echo -n "Downloading the $component schema:"
+curl -s -L -o /tmp/${$component}.zip "https://github.com/stans-robot-project/${component}/archive/main.zip"   &>> $logfile
 status $? 
 
-echo -n "Extracting the $COMPONENT Schema:"
+echo -n "Extracting the $component Schema:"
 cd /tmp  
-unzip -o /tmp/${COMPONENT}.zip   &>> $logfile
+unzip -o /tmp/${component}.zip   &>> $logfile
 status $? 
 
-echo -n "Injecting the $COMPONENT Schema :"
-cd ${COMPONENT}-main 
+echo -n "Injecting the $component Schema :"
+cd ${component}-main 
 mysql -u root -pRoboShop@1 <shipping.sql &>> $logfile
 status $? 
