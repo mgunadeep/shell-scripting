@@ -2,7 +2,7 @@
 component=mysql
 logfile=/tmp/$component.log
 
-source components/common.sh
+source roboshop/components/common.sh
 
 echo -n "Configuring the repo:"
 curl -s -L -o /etc/yum.repos.d/$component.repo https://raw.githubusercontent.com/stans-robot-project/$component/main/$component.repo &>> $logfile
