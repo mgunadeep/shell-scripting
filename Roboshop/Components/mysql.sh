@@ -1,6 +1,5 @@
 #!/bin/bash
 component=mysql
-logfile=/tmp/$component.log
 
 source Roboshop/components/repeat.sh
 
