@@ -8,6 +8,7 @@ if [ $ID -ne 0 ]; then
     exit 1
 fi
 
+
 status () {
     if [ $1 -eq 0 ]; then 
             echo -e "\e[32m Success \e[0m"
@@ -15,6 +16,7 @@ status () {
             echo -e "\e[31m failure \e[0m"
     fi
 }
+
 
 echo -n "Configuring the repo:"
 curl -s -L -o /etc/yum.repos.d/$component.repo https://raw.githubusercontent.com/stans-robot-project/$component/main/$component.repo &>> $logfile
