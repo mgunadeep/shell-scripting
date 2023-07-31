@@ -51,15 +51,15 @@ fi
 
 
 echo -n "Downloading the $component schema:"
-curl -s -L -o /tmp/${$component}.zip "https://github.com/stans-robot-project/${component}/archive/main.zip"   &>> $logfile
+curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"   &>> $logfile
 status $? 
 
 echo -n "Extracting the $component Schema:"
 cd /tmp  
-unzip -o /tmp/${component}.zip   &>> $logfile
+unzip -o /tmp/$component.zip   &>> $logfile
 status $? 
 
 echo -n "Injecting the $component Schema :"
-cd ${component}-main 
+cd $component-main 
 mysql -u root -pRoboShop@1 <shipping.sql &>> $logfile
 status $? 
