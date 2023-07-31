@@ -1,6 +1,6 @@
 #!/bin/bash
 component=mysql
-source /Users/guna/Learn/shell-scripting/Roboshop/components/repeat.sh
+source shell-scripting/Roboshop/Components/repeat.sh
 
 echo -n "Configuring the repo:"
 curl -s -L -o /etc/yum.repos.d/$component.repo https://raw.githubusercontent.com/stans-robot-project/$component/main/$component.repo &>> $logfile
