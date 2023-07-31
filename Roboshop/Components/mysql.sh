@@ -35,31 +35,31 @@ DEFAULT_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk  '{p
 status $? 
 
 # I want this to be executed only if the default password reset, was not done. 
-echo "show databases;" | mysql -uroot -pRoboShop@1 &>> $LOGFILE
+echo "show databases;" | mysql -uroot -pRoboShop@1 &>> $logfile
 if [ $? -ne 0 ] ; then 
     echo -n "Performing password reset of root user:"
-    echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql --connect-expired-password -uroot -p${DEFAULT_ROOT_PASSWORD}   &>> $LOGFILE
+    echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql --connect-expired-password -uroot -p${DEFAULT_ROOT_PASSWORD}   &>> $logfile
     status $?
 fi 
 
-echo "show plugins;" | mysql -uroot -pRoboShop@1 | grep validate_password &>> $LOGFILE
+echo "show plugins;" | mysql -uroot -pRoboShop@1 | grep validate_password &>> $logfile
 if [ $? -eq 0 ] ; then 
     echo -n "Uninstalling the validate_password plugin :"
-    echo "UNINSTALL PLUGIN validate_password;" | mysql -uroot -pRoboShop@1   &>> $LOGFILE
+    echo "UNINSTALL PLUGIN validate_password;" | mysql -uroot -pRoboShop@1   &>> $logfile
     status $?
 fi 
 
 
 echo -n "Downloading the $COMPONENT schema:"
-curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"   &>> $logfile
 status $? 
 
 echo -n "Extracting the $COMPONENT Schema:"
 cd /tmp  
-unzip -o /tmp/${COMPONENT}.zip   &>> $LOGFILE
+unzip -o /tmp/${COMPONENT}.zip   &>> $logfile
 status $? 
 
 echo -n "Injecting the $COMPONENT Schema :"
 cd ${COMPONENT}-main 
-mysql -u root -pRoboShop@1 <shipping.sql &>> $LOGFILE
+mysql -u root -pRoboShop@1 <shipping.sql &>> $logfile
 status $? 
