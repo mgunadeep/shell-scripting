@@ -1,6 +1,5 @@
 #!/bin/bash
 component=mysql
-
 source Roboshop/components/repeat.sh
 
 echo -n "Configuring the repo:"
