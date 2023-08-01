@@ -46,7 +46,7 @@ status $?
 
 echo -n "Performing a cleanup:"
 cd $component
-mvn clean package 
+mvn clean package &>> $logfile
 mv target/$component-1.0.jar  $component.jar
 status $?
 
