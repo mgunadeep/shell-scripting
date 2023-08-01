@@ -41,11 +41,12 @@ rm -rf *
 status $?
 
 echo -n "unzipping the content:"
+rm -rf $component &>> $logfile
 unzip -o /tmp/$component.zip &>> $logfile
 status $?
 
 echo -n "moving the content:"
-mv $component-main/* .
+mv -f $component-main/* .
 mv static/* .
 status $?
 
