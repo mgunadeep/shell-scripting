@@ -51,3 +51,10 @@ pip3 install -r requirements.txt  &>> $logfile
 status $?
 
 
+userid=$(id -u roboshop)
+groupid=$(id -g roboshop)
+
+echo -n "Updating the uid and gid of $appuser in $component.ini file:"
+sed -i  -e "/^uid/ c uid=$userid" -e "/^gid/ c gid=$groupid" /home/roboshop/$component/payment.ini
+status $?
+
