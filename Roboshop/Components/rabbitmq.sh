@@ -40,11 +40,11 @@ systemctl status $component-server -l  &>> $logfile
 status $?
 
 echo -n "Creating a useraccount $appuser for, $component:"
-rabbitmqctl add_user $appuser $appuser123
+rabbitmqctl add_user roboshop roboshop123  &>> $logfile
 status $?
 
 echo -n "Giving the necessary privileages for $appuser useraccount:"
-rabbitmqctl set_user_tags $appuser administrator  &>> $logfile
-rabbitmqctl set_permissions -p / $appuser ".*" ".*" ".*"  &>> $logfile
+rabbitmqctl set_user_tags roboshop administrator  &>> $logfile
+rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"  &>> $logfile
 status $?
 
