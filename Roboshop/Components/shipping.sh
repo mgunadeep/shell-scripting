@@ -36,7 +36,7 @@ curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$compo
 status $?
 
 echo -n "Unzipping and Renaming:"
-unzip -o /tmp/$component.zip
+unzip -o /tmp/$component.zip &>> $logfile
 mv $component-main $component
 status $?
 
