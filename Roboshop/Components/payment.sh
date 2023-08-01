@@ -23,10 +23,10 @@ echo -n "Installing the python3:"
 yum install python36 gcc python3-devel -y  &>> $logfile
 status $?
 
-id $appuseruser &>> $logfile
+id $appuser &>> $logfile
 if [ $? -ne 0 ]; then              ### This function is written-to take care of exception handling. So, if the service accnt is already created it doesn't do anything. But, if the service account is not created, then it creates a new one.
    echo -n "Creating a useraccount for $component:"
-   useradd $appuseruser &>> $logfile
+   useradd $appuser &>> $logfile
    status $?
 fi
 
