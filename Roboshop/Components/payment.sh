@@ -61,3 +61,19 @@ status $?
 echo -n "Updating the DNS in systemD file of $component:"
 sed -i -e 's/AMQPHOST/mysql.roboshop.internal/' -e 's/USERHOST/user.roboshop.internal/' -e 's/CARTHOST/cart.roboshop.internal/' /home/roboshop/$component/systemd.service
 status $?
+
+echo -n "SettingUp the $component with systemctl:"
+mv -f /home/roboshop/$component/systemd.service /etc/systemd/system/$component.service
+status $?
+
+echo -n "Reloading and Enabling the $component:"
+systemctl daemon-reload
+systemctl enable $component  &>> $logfile
+
+echo -n "Restarting the $component service:"
+systemctl restart $component
+status $?
+
+echo -n "Checking the status of $component:"
+systemctl status $component -l
+status $?
