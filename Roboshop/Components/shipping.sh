@@ -23,7 +23,7 @@ echo -n "Installing the maven:"
 yum install maven -y &>> $logfile
 status $?
 
-id $appuseruser &>> $logfile
+id $appuser &>> $logfile
 if [ $? -ne 0 ]; then              ### This function is written-to take care of exception handling. So, if the service accnt is already created it doesn't do anything. But, if the service account is not created, then it creates a new one.
    echo -n "Creating a $appuser service account:"
    useradd $appuser &>> $logfile
@@ -36,7 +36,7 @@ curl -s -L -o /tmp/$component.zip "https://github.com/stans-robot-project/$compo
 status $?
 
 echo -n "Unzipping and Renaming:"
-unzip -0 /tmp/$component.zip
+unzip -o /tmp/$component.zip
 mv $component-main $component
 status $?
 
