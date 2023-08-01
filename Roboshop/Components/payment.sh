@@ -69,6 +69,7 @@ status $?
 echo -n "Reloading and Enabling the $component:"
 systemctl daemon-reload
 systemctl enable $component  &>> $logfile
+status $?
 
 echo -n "Restarting the $component service:"
 systemctl restart $component
