@@ -59,7 +59,7 @@ sed -i  -e "/^uid/ c uid=$userid" -e "/^gid/ c gid=$groupid" /home/roboshop/$com
 status $?
 
 echo -n "Updating the DNS in systemD file of $component:"
-sed -i -e 's/AMQPHOST/mysql.roboshop.internal/' -e 's/USERHOST/user.roboshop.internal/' -e 's/CARTHOST/cart.roboshop.internal/' /home/roboshop/$component/systemd.service
+sed -i -e 's/AMQPHOST/rabbitmq.roboshop.internal/' -e 's/USERHOST/user.roboshop.internal/' -e 's/CARTHOST/cart.roboshop.internal/' /home/roboshop/$component/systemd.service
 status $?
 
 echo -n "SettingUp the $component with systemctl:"
