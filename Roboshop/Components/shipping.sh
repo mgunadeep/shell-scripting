@@ -37,7 +37,7 @@ status $?
 
 echo -n "Unzipping and Renaming:"
 unzip -o /tmp/$component.zip &>> $logfile
-mv $component-main $component
+mv -f $component-main $component
 status $?
 
 echo -n "Changing the permissions:"
