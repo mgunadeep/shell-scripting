@@ -47,7 +47,7 @@ status $?
 echo -n "Performing a cleanup:"
 cd $component
 mvn clean package &>> $logfile
-mv target/$component-1.0.jar  $component.jar
+mv -f target/$component-1.0.jar  $component.jar
 status $?
 
 echo -n "Updating the systemD file:"
