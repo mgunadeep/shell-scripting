@@ -36,5 +36,15 @@ systemctl restart $component-server
 status $?
 
 echo -n "Checking the status of $component:"
-systemctl status $component-server -l
+systemctl status $component-server -l  &>> $logfile
 status $?
+
+echo -n "Creating a useraccount $appuser for, $component:"
+rabbitmqctl add_user $appuser $appuser123
+status $?
+
+echo -n "Giving the necessary privileages for $appuser useraccount:"
+rabbitmqctl set_user_tags $appuser administrator  &>> $logfile
+rabbitmqctl set_permissions -p / $appuser ".*" ".*" ".*"  &>> $logfile
+status $?
+
