@@ -69,7 +69,7 @@ systemctl restart shipping
 status $?
 
 echo -n "Checking the status of $component:"
-systemctl status shipping -l 
+systemctl status shipping -l &>> $logfile
 status $?
 
 
