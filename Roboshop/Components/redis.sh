@@ -22,7 +22,7 @@ curl -L https://raw.githubusercontent.com/stans-robot-project/$component/main/$c
 status $?
 
 echo -n "Installing the $component:"
-yum install redis-6.2.11 -y &>>logfile
+yum install redis-6.2.12 -y &>>logfile
 status $?
 
 echo -n "Updating the bindIP:"
