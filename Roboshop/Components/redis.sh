@@ -30,7 +30,7 @@ sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$component.conf
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$component/$component.conf
 status $?
 
-echo -n "Enabling and starting the $component:"
+echo -n "Enabling the $component:"
 systemctl enable redis &>>logfile
 
 echo -n "Restarting the $component:"
