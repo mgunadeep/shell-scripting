@@ -32,6 +32,8 @@ status $?
 
 echo -n "Enabling and starting the $component:"
 systemctl enable redis &>>logfile
+
+echo -n "Restarting the $component:"
 systemctl restart redis
 status $?
 
