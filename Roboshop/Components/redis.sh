@@ -18,7 +18,7 @@ status () {
 }
 
 echo -n "Configuring the repo:"
-curl -L https://raw.githubusercontent.com/stans-robot-project/$component/main/$component.repo -o /etc/yum.repos.d/$component.repo &>>logfile
+curl -L https://raw.githubusercontent.com/stans-robot-project/redis/main/redis.repo -o /etc/yum.repos.d/redis.repo &>>logfile
 status $?
 
 echo -n "Installing the $component:"
@@ -31,13 +31,13 @@ sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$component/$component.conf
 status $?
 
 echo -n "Enabling the $component:"
-systemctl enable redis.service &>>logfile
+systemctl enable redis &>>logfile
 
 echo -n "Restarting the $component:"
-systemctl start redis.service
+systemctl start redis
 status $?
 
 echo -n "Checking the status:"
-systemctl status redis.service -l &>>logfile
+systemctl status redis -l &>>logfile
 status $?
 
