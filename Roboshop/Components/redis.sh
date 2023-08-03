@@ -31,13 +31,13 @@ sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/$component/$component.conf
 status $?
 
 echo -n "Enabling the $component:"
-systemctl enable redis &>>logfile
+systemctl enable redis.service &>>logfile
 
 echo -n "Restarting the $component:"
-systemctl start redis
+systemctl start redis.service
 status $?
 
 echo -n "Checking the status:"
-systemctl status redis -l &>>logfile
+systemctl status redis.service -l &>>logfile
 status $?
 
