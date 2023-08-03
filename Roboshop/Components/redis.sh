@@ -34,7 +34,7 @@ echo -n "Enabling the $component:"
 systemctl enable redis &>>logfile
 
 echo -n "Restarting the $component:"
-systemctl restart redis
+systemctl start redis
 status $?
 
 echo -n "Checking the status:"
