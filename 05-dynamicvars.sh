@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 ### There are some variables, whose values gets changed withrespect to time. These are called as "Dynamic variables".
 ### These should not be hardcoded as their data/value gets changed too often. So,instead we should softcode them using expressions to dynamically represent the result by querying the data from the system.
 
