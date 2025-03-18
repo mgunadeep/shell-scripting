@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Redirectors are of 2 types in bash.
 #     1) Input Redirector   ( It means, to give an input from a file )       :  '<'          (Ex:- sudo mysql </tmp/studentapp.sql) == Here, the input for the DBcommand 'mysql' is given from the file named '/tmp/studentapp.sql'
