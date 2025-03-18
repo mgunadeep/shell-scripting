@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 ### Presentation really matters a lot and who doesn't love a nice and colorful output? Now, we''ll see how to print both background and foreground text in colors.
 
