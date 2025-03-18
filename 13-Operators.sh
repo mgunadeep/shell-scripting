@@ -1,4 +1,4 @@
-# #!bin/bash
+#!/bin/bash
 
 # #In Bash scripting, operators..are symbols or special keywords that allow you to perform various operations on data, variables, and expressions.
 # They are used to manipulate values, make decisions, and perform calculations, making your scripts more powerful and flexible and increases the efficiency of your scripts.
