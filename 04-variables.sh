@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 ### What is a variable?? Variable itself means- 'It changes and is not constant'.
 ### A variable is used...to store or assaign a specific data/value and also used to pass the values, later on when required in the script/programm.
