@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # There are 4 types of commands available : 
 
