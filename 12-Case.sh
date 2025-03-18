@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # What is a CASE???
 # Case is like an if-statement, but it's more like a switcher.
