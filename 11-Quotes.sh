@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # In bash, output of your command changes, completely based on the quotes you use...
 # " "   = Double Quotes 
