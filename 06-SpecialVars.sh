@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 ### Special variables gives special properties to your variables 
 
