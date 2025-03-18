@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo hello World
 #echo--> This command is used, to print a required text. In this case the above command just prints the text -- Hello World
