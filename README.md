@@ -4,15 +4,12 @@ This repo is created to make novices more familiar, about automation using the s
 Things to remember, whn you're scripting:-
 ```
 * When you develop something, ensure you run it twice before you confirm it as, 'WORKING'.
+* There are no data types like (int, float, char, string) in bash scripting.
 * Ensure, you remove the duplicate pieces of code.
 * 'Validation'--should be given a very high priority. 
 * Try to 'parameterize' the script and as much as possible, and make your script dynamic.
-```
-Exit Status:- Every command, that you execute..will return some status code and based on that code, we can decide whether the command is success/failure/partially completed, and the command to see the exit code of the previous command is echo $?
+* When you put a hash at the starting, it will be reffered as "comment". As bash would ignore execting it, its kind of a giving a description. A set of Comments are called as HereDoc. 
+* 7. When doing manually, you can switch user’s by giving the command  “sudo su - guna”. But,when automating a specific task by writing a script, you shouldn’t give the switch user “su - “ command in the script, as this breaks the execution of the script, and you need to sign-in again. So, Instead…you can change the ownership and permissions for that executing file.
 
 ```
-  In Linux, exit codes range from 0 to 255.
 
-  0     : Exit Code means, command completed successfully.
- 1-255  : Either partially completed or failed.
-```
