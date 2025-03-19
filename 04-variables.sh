@@ -3,6 +3,7 @@
 ### What is a variable?? Variable itself means- 'It changes and is not constant'.
 ### A variable is used...to store or assaign a specific data/value and also used to pass the values, later on when required in the script/programm.
 ### Variable should never start with a number.
+### 4. You ‘SHOULD’ definitely declare the variable at the start, or else it’s going to take it as null value, while executing that file.
 ### In other Programming languages, there are different datatypes like int,float,char,string. But, in Bash everything is a string by default and there is no concept of datatypes here.
 
 # In Bash scripting, there are 3 main types of variables:
