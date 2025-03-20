@@ -51,7 +51,7 @@ if [ $mark -ge 90 ]; then
 elif [ $mark -ge 89 ]; then
     echo "Good! You have scored A grade"
 elif [ $mark -ge 75 ]; then
-     echo "Scope for improvement, You have scored B grade"
+    echo "Scope for improvement, You have scored B grade"
 elif [ $mark -ge 60 ]; then
     echo "Work very hard, You have scored C grade"
 
