@@ -3,10 +3,10 @@
 ### Special variables gives special properties to your variables 
 
 # Here are few of the special variabes :  $0 to $9 , $* , $@  $# , $$, $?
-# Arguments--> values, that are suppied via the CLI.
+# Arguments--> input values that you pass via CLI to a script when executing it.
 
 ###  $0        : This gives the name of the script you're executing.
-###  $1 to $9  : You can pass a maximum of '9' variables from the CLI, when you're running the script and these are called 'Arguments'. 
+###  $1 to $9  : You can pass a maximum of '9' arguments via the CLI, 
 ###  $*        : Prints you, all the arguments as a single string/treats all arguments as one.
 ###  $@        : Prints you, all the arguments as separate words/preserves spaces in arguments.
 ###  $#        : Prints you, the total number(count) of Arguments-(that you have supplied via CLI).
