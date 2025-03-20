@@ -3,14 +3,16 @@
 ### Special variables gives special properties to your variables 
 
 # Here are few of the special variabes :  $0 to $9 , $* , $@  $# , $$, $?
+# Arguments--> input values that you pass via CLI to a script when executing it.
 
 ###  $0        : This gives the name of the script you're executing.
-###  $1 to $9  : You can pass a maximum of '9' variables from the CLI, when you're running the script and these are called 'Arguments'. 
-###  $*        : Prints you, all the supplied variables in the script.
-###  $@        : Prints you, all the supplied variables in the script.
-###  $#        : Prints you, the total number of Arguments,that you have supplied via CLI.
-###  $$        : Prints you, the Process-ID of that script,you're executing.
-###  $?        : Gives you, the exit code of the previous command.
+###  $1 to $9  : You can pass a maximum of '9' arguments via the CLI, 
+###  $*        : Prints you, all the arguments as a single string/treats all arguments as one.
+###  $@        : Prints you, all the arguments as separate words/preserves spaces in arguments.
+###  $#        : Prints you, the total number(count) of Arguments-(that you have supplied via CLI).
+###  $$        : Prints you, the process-PID of the current script,you're executing.
+###  $!        : Prints you, the Last background process-PID
+###  $?        : Gives you, the exit code of the previous/Last command.
 
 echo $0   ### This prints the name of the script that you're executing. 
 echo "Name of the script printed is $0"
