@@ -5,6 +5,8 @@
 ### Variable should never start with a number.
 ### You ‘SHOULD’ definitely declare the variable at the start, or else it’s going to take it as null value, while executing that file.
 ### In other Programming languages, there are different datatypes like int,float,char,string. But, in Bash everything is a string by default and there is no concept of datatypes here.
+### when you enclose any variable in single quotes, it will print the variable name as it is. That also means, single quotes will elimiate the special variables power.
+### $a or ${a} or "${a}"--> All these are same. 
 
 # In Bash scripting, there are 3 main types of variables:
 
