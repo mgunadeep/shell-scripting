@@ -20,7 +20,7 @@ ls -ltr &> op.txt   # Redirects, both standardOut and standardErrors to the file
 ls -ltr &>> op.txt  # Redirects, both standardOut and standardErrors to the file op.txt by appending to the already existing content.
 ls -ltr 2> op.txt   # Redirects, only the standard errors to the file op.txt 
 
-
+                               # EXIT CODES
 # Each and every action in linux will have an exit which determines the status of the completion,
 # Range of exit codes is 0 to 255 
 # 0         :  successful 
