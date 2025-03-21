@@ -7,6 +7,9 @@
 ### In other Programming languages, there are different datatypes like int,float,char,string. But, in Bash everything is a string by default and there is no concept of datatypes here.
 ### when you enclose any variable in single quotes, it will print the variable name as it is. That also means, single quotes will elimiate the special variables power.
 ### $a or ${a} or "${a}"--> All these are same. 
+echo "${uptime}"	# Prints the value of the variable $uptime (if declared)
+echo "$(uptime)"	# Runs the uptime command and prints its output.
+#--> As, you can see the output differs, based upon the brackets you use. So,be mindfull of type of brackets you enclose in.
 
 # In Bash scripting, there are 3 main types of variables:
 
@@ -17,10 +20,10 @@
 # Ex:- 
 #      Let's see an example of local variable i.e $name in the Car function, 
 Car () {
-    local name="Ferrari 488 GTB!"
+    local name="911 GT3 RS!"
     echo "I love, $name!"
 }
-Car                 #==> Output:-  I love, Ferrari 488 GTB!!
+Car                 #==> Output:-  I love, 911 GT3 RS!!
 
 echo "Name=$name"   #==> Output:-  Name=
 # As, you can see we tried to print the data in the variable by giving the command--> $name, But it din't give the expected output, as it's a local variable and can't really be used outside of that specific function.
