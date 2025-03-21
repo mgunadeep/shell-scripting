@@ -10,8 +10,8 @@
 #  NOTE:-  '>>' [ This symbol means, it adds the latest output to the already existing content in that file, without overwriting ]
 
 # Outputs :  
-#     1) Standard Output             : 1> or > or >> (Appends)
-#     2) Standard Error              : 2>  or 2>> captures only the standard error   
+#     1) Standard Output             : > or 1> or >> (Appends)
+#     2) Standard Error              : 2> or 2>> captures only the standard error   
 #     3) Standard output and error   : &> or &>> This captures both errors and standard output 
 
 ls -ltr > op.txt    # Redirects, the output to the file op.txt
